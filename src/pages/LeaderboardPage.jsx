@@ -1,5 +1,6 @@
 import { Trophy, Users, Star, Medal, Crown } from 'lucide-react';
 import NavBar from '../components/NavBar';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const TOP_USERS = [
     { rank: 1, name: 'Mülakat Şampiyonu #42', score: 9.8, role: 'Yazılım', date: '2 saat önce' },
@@ -15,6 +16,7 @@ export default function LeaderboardPage() {
     return (
         <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg-primary)' }}>
             <NavBar />
+            <Breadcrumbs items={[{ label: 'Liderlik Tablosu', to: '/liderlik-tablosu' }]} />
 
             <div style={{ maxWidth: '800px', margin: '0 auto', padding: '64px 24px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '56px' }}>

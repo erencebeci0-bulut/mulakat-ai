@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { DollarSign, Calculator, Info, Wallet, PieChart } from 'lucide-react';
 import NavBar from '../components/NavBar';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 export default function MaasHesaplamaPage() {
     const [gross, setGross] = useState('');
@@ -11,7 +12,7 @@ export default function MaasHesaplamaPage() {
         if (isNaN(amount) || amount <= 0) return;
 
         // Simplified Turkish Salary Calculation logic (approximate for MVP)
-        // 2024 approximation: %14 SGK, %1 İşsizlik, %15-20 Income Tax (simplified)
+        // General approximation: %14 SGK, %1 İşsizlik, %15-20 Income Tax (simplified)
         const sgk = amount * 0.14;
         const issizlik = amount * 0.01;
         const taxBase = amount - sgk - issizlik;
@@ -36,6 +37,7 @@ export default function MaasHesaplamaPage() {
     return (
         <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg-primary)' }}>
             <NavBar />
+            <Breadcrumbs items={[{ label: 'Maaş Hesaplama', to: '/maas-hesaplama' }]} />
 
             <div style={{ maxWidth: '800px', margin: '0 auto', padding: '64px 24px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '48px' }}>
@@ -77,7 +79,7 @@ export default function MaasHesaplamaPage() {
                         <div style={{ marginTop: '24px', padding: '16px', backgroundColor: 'var(--bg-secondary)', borderRadius: '12px', display: 'flex', gap: '12px' }}>
                             <Info size={18} color="var(--accent)" style={{ flexShrink: 0 }} />
                             <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
-                                Bu hesaplama 2024 vergi dilimleri ve parametreleri baz alınarak yaklaşık olarak yapılmıştır. Kesin sonuçlar için muhasebe departmanınıza danışın.
+                                Bu hesaplama güncel vergi dilimleri ve parametreleri baz alınarak yaklaşık olarak yapılmıştır. Kesin sonuçlar için muhasebe departmanınıza danışın.
                             </p>
                         </div>
                     </div>

@@ -40,10 +40,10 @@ export default function CVUploadPage({ sessionData, updateSession }) {
                 updateSession({ cvText: data.text });
                 navigate('/rol');
             } else {
-                setError('CV okunamadı. Lütfen daha net bir dosya yükleyin.');
+                setError('CV tam olarak okunamadı. Dilerseniz CV olmadan devam edebilirsiniz.');
             }
         } catch {
-            setError('CV okunamadı. Lütfen daha net bir dosya yükleyin.');
+            setError('Dosya yüklenirken bir sorun oluştu. Dilerseniz manuel devam edebilirsiniz.');
         } finally {
             setLoading(false);
         }
@@ -173,16 +173,16 @@ export default function CVUploadPage({ sessionData, updateSession }) {
 
                     {error && (
                         <div style={{
-                            background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)',
+                            background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.3)',
                             borderRadius: '10px', padding: '14px 18px', marginBottom: '16px',
-                            color: '#ef4444', fontSize: '14px',
+                            color: '#f59e0b', fontSize: '14px',
                         }}>
                             ⚠️ {error}
                         </div>
                     )}
 
-                    <button className="btn btn-ghost" style={{ width: '100%', marginTop: '8px' }} onClick={handleSkip}>
-                        Şimdilik geç →
+                    <button className={error ? "btn btn-secondary" : "btn btn-ghost"} style={{ width: '100%', marginTop: '8px' }} onClick={handleSkip}>
+                        {error ? 'CV Olmadan Devam Et →' : 'Şimdilik geç →'}
                     </button>
                 </div>
             </div>

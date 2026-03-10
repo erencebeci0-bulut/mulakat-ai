@@ -66,7 +66,7 @@ export default function NavBar() {
                     </button>
 
                     {/* CTA */}
-                    <button className="btn btn-primary" onClick={() => navigate('/cv')} style={{ padding: '8px 18px', fontSize: '14px' }}>
+                    <button className="btn btn-primary" onClick={() => navigate('/ai-interview')} style={{ padding: '8px 18px', fontSize: '14px' }}>
                         Mülakata Başla
                     </button>
 

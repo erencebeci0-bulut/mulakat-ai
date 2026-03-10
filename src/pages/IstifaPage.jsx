@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FileSignature, Copy, Check, Download, Info } from 'lucide-react';
 import NavBar from '../components/NavBar';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 export default function IstifaPage() {
     const [formData, setFormData] = useState({
@@ -47,6 +48,7 @@ Tarih: ${today}`;
     return (
         <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg-primary)' }}>
             <NavBar />
+            <Breadcrumbs items={[{ label: 'İstifa Dilekçesi', to: '/istifa-dilekcesi' }]} />
 
             <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '64px 24px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '48px' }}>

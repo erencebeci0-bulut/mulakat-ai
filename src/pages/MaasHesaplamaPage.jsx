@@ -68,7 +68,7 @@ export default function MaasHesaplamaPage() {
             <SEOHead
                 title="Maaş Hesaplama Aracı | Türkiye Maaş Analizi"
                 description="Sektör ve tecrübeye göre net/brüt maaş hesaplama ve güncel piyasa analizleri."
-                url="https://xn--mlakat-3ya.com/maas-hesaplama"
+                url="https://mülakat.com/maas-hesaplama"
             />
             <NavBar />
             <Breadcrumbs items={[{ label: 'Maaş Hesaplama', to: '/maas-hesaplama' }]} />

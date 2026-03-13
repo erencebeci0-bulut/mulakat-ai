@@ -24,7 +24,7 @@ To securely modify the admin password, we have implemented an environment variab
 ## Final Launch Checklist
 Before pointing your domain to the public, ensure the following:
 - [ ] **Vercel Settings:** Push this project to GitHub and deploy via Vercel. Add `VITE_ADMIN_PASSWORD` to your Vercel Environment Variables.
-- [ ] **Domain Check:** Verify `https://xn--mlakat-3ya.com` is the primary domain routing on Vercel to maintain your hardcoded canonical SEO structure.
+- [ ] **Domain Check:** Verify `https://mülakat.com` is the primary domain routing on Vercel to maintain your canonical SEO structure.
 - [ ] **Inbox Ready:** Ensure `hello@mulakatim.com` is actively monitored for incoming user feedback and "İçerik Kaldırma" requests.
 - [ ] **Data Honesty:** Remember that the metrics seen in `/yonetim-merkezi` are currently demo placeholders for testing layout. True metrics will flow post-launch.
 - [ ] **Launch:** Share your project. The application is completely hardened and safe for public traffic.

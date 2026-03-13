@@ -93,9 +93,9 @@ export default function AiInterviewSimulatorPage() {
     return (
         <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg-primary)' }}>
             <SEOHead
-                title="AI Mülakat Simülasyonu | Gerçek İş Görüşmesi Pratiği"
-                description="Yapay zeka asistanıyla gerçekçi mülakat deneyimi yaşa. Türkiye'nin ilk rol bazlı mülakat koçu."
-                url="https://xn--mlakat-3ya.com/ai-interview"
+                title="Yapay Zeka Mülakat Simülatörü"
+                description="Türkiye'nin ilk yerel AI Mülakat motoru. Sektörüne ve rolüne uygun gerçek mülakat sorularıyla pratik yap, anında geri bildirim al. Ücretsiz ve sınırsız."
+                url="https://mülakat.com/ai-interview"
             />
             <NavBar />
             <Breadcrumbs items={[{ label: 'AI Mülakat Simülasyonu', to: '/ai-interview' }]} />

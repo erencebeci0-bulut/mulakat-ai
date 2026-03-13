@@ -18,12 +18,12 @@ const POPULAR_TOOLS = [
 ];
 
 const INTERVIEW_QUESTIONS = [
-    { title: 'Yazılım Uzmanı', count: '45 Soru', href: '/mulakat-sorulari/yazilimci' },
-    { title: 'İK Uzmanı', count: '32 Soru', href: '/mulakat-sorulari/ik' },
-    { title: 'Satış Temsilcisi', count: '28 Soru', href: '/mulakat-sorulari/satis-temsilcisi' },
-    { title: 'Banka Gişe Görevlisi', count: '50+ Soru', href: '/mulakat-sorulari/banka' },
-    { title: 'Çağrı Merkezi', count: '25 Soru', href: '/mulakat-sorulari/cagri-merkezi' },
-    { title: 'Stajyer', count: '18 Soru', href: '/mulakat-sorulari/staj' },
+    { title: 'Yazılım Uzmanı', count: '45 Soru', href: '/interview-questions/yazilim-muhendisi' },
+    { title: 'İK Uzmanı', count: '32 Soru', href: '/interview-questions/ik' },
+    { title: 'Satış Temsilcisi', count: '28 Soru', href: '/interview-questions/satis-temsilcisi' },
+    { title: 'Banka Gişe Görevlisi', count: '50+ Soru', href: '/interview-questions/banka' },
+    { title: 'Çağrı Merkezi', count: '25 Soru', href: '/interview-questions/cagri-merkezi' },
+    { title: 'Stajyer', count: '18 Soru', href: '/interview-questions/staj' },
 ];
 
 const SALARIES = [
@@ -43,9 +43,9 @@ export default function LandingPage() {
     return (
         <div style={{ minHeight: '100vh', background: 'var(--bg-primary)' }}>
             <SEOHead
-                title="Mülakat Hazırlığı, Maaş Hesaplama ve CV Oluşturma | Mülakat.com"
-                description="Mülakat simülasyonları, maaş araştırmaları ve iş hayatı rehberi. Türkiye'nin ücretsiz kariyer veri platformu."
-                url="https://xn--mlakat-3ya.com"
+                title="mülakat.com — Türkiye'nin Ücretsiz Kariyer Veri Platformu"
+                description="mülakat.com ile alanınıza özel mülakat sorularını öğrenin, maaşınızı hesaplayın, profesyonel CV oluşturun ve mülakat simülasyonları yapın."
+                url="https://mülakat.com"
             />
             <NavBar />
 
@@ -87,11 +87,33 @@ export default function LandingPage() {
                             </button>
                         </div>
 
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginTop: '36px', fontSize: '14px', color: 'var(--text-muted)' }}>
-                            <div style={{ display: 'flex', gap: '-10px' }}>
-                                {[1, 2, 3, 4].map(i => <div key={i} style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--border), var(--border-light))', border: '2px solid var(--bg-primary)', zIndex: 5 - i, marginLeft: i === 1 ? 0 : '-12px' }} />)}
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '36px', fontSize: '14px', color: 'var(--text-muted)' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                                <div style={{ display: 'flex', gap: '-10px' }}>
+                                    {['E', 'A', 'M', 'S', 'K'].map((initial, i) => (
+                                        <div key={i} style={{
+                                            width: '32px', height: '32px', borderRadius: '50%',
+                                            background: ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899'][i], border: '2px solid var(--bg-primary)',
+                                            zIndex: 5 - i, marginLeft: i === 0 ? 0 : '-12px',
+                                            display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                            color: '#ffffff', fontSize: '13px', fontWeight: 700
+                                        }}>
+                                            {initial}
+                                        </div>
+                                    ))}
+                                </div>
+                                <span><strong style={{ color: 'var(--text-primary)' }}>10.000+</strong> kullanıcı kariyer araçlarını kullandı</span>
                             </div>
-                            <span><strong style={{ color: 'var(--text-primary)' }}>10.000+</strong> aday hazırlandı</span>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', fontSize: '13px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--accent)' }}></div>
+                                    <span><strong>500+</strong> mülakat sorusu analiz edildi</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                    <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--success)' }}></div>
+                                    <span><strong>100+</strong> şirket mülakat deneyimi</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -149,13 +171,16 @@ export default function LandingPage() {
                 <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '400px', height: '1px', background: 'linear-gradient(90deg, transparent, var(--accent), transparent)', opacity: 0.5 }} />
                 <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
                     <p style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1.5px', color: 'var(--text-muted)', fontWeight: 700, marginBottom: '32px' }}>
-                        Verilerini analiz ettiğimiz ve çözümler ürettiğimiz şirketler
+                        Platformumuzda mülakat deneyimi paylaşılan şirketler
                     </p>
-                    <div style={{ display: 'flex', gap: '48px', justifyContent: 'center', flexWrap: 'wrap', opacity: 0.6, filter: 'grayscale(100%)' }}>
+                    <div style={{ display: 'flex', gap: '48px', justifyContent: 'center', flexWrap: 'wrap', opacity: 0.6, filter: 'grayscale(100%)', marginBottom: '24px' }}>
                         {COMPANIES.slice(0, 6).map(c => (
                             <span key={c} style={{ fontSize: '19px', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>{c}</span>
                         ))}
                     </div>
+                    <p style={{ fontSize: '11px', color: 'var(--text-muted)', opacity: 0.7, maxWidth: '800px', margin: '0 auto' }}>
+                        Burada yer alan şirket isimleri ilgili markaların ticari mülküdür. Mülakat.com bu şirketlerle resmi bir iş birliği içinde değildir. Şirket isimleri yalnızca kullanıcıların paylaştığı mülakat deneyimleri bağlamında gösterilmektedir.
+                    </p>
                 </div>
             </section>
 
@@ -336,12 +361,12 @@ export default function LandingPage() {
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
                     {[
-                        { n: 'Trendyol', r: '4.8', res: '85 Yorum', href: '/sirket/trendyol' },
-                        { n: 'Hepsiburada', r: '4.5', res: '64 Yorum', href: '/sirket/hepsiburada' },
-                        { n: 'Amazon', r: '4.9', res: '112 Yorum', href: '/sirket/amazon' },
-                        { n: 'Garanti BBVA', r: '4.4', res: '45 Yorum', href: '/sirket/garanti' },
-                        { n: 'Migros', r: '4.2', res: '92 Yorum', href: '/sirket/migros' },
-                        { n: 'Türk Hava Yolları', r: '4.7', res: '150 Yorum', href: '/sirket/thy' },
+                        { n: 'Trendyol', r: '4.8', res: '85 Yorum', href: '/company/trendyol' },
+                        { n: 'Hepsiburada', r: '4.5', res: '64 Yorum', href: '/company/hepsiburada' },
+                        { n: 'Amazon', r: '4.9', res: '112 Yorum', href: '/company/amazon' },
+                        { n: 'Garanti BBVA', r: '4.4', res: '45 Yorum', href: '/company/garanti' },
+                        { n: 'Migros', r: '4.2', res: '92 Yorum', href: '/company/migros' },
+                        { n: 'Türk Hava Yolları', r: '4.7', res: '150 Yorum', href: '/company/thy' },
                     ].map(c => (
                         <Link key={c.n} to={c.href} className="card hover-lift" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '16px' }}>
                             <div style={{ width: '56px', height: '56px', borderRadius: '12px', background: 'var(--bg-secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -529,11 +554,11 @@ export default function LandingPage() {
                     <div>
                         <h4 style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '20px' }}>Kategoriler</h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                            <Link to="/mulakat-sorulari" className="footer-link">Mülakat Soruları</Link>
-                            <Link to="/maas" className="footer-link">Meslek Maaşları</Link>
-                            <Link to="/sirketler" className="footer-link">Şirket Sayfaları</Link>
-                            <Link to="/cv-ornekleri" className="footer-link">CV Örnekleri</Link>
-                            <Link to="/rehber" className="footer-link">Kariyer Rehberi</Link>
+                            <Link to="/interview-questions" className="footer-link">Mülakat Soruları</Link>
+                            <Link to="/yazilim-muhendisi-maasi" className="footer-link">Meslek Maaşları</Link>
+                            <Link to="/company/google" className="footer-link">Şirket Sayfaları</Link>
+                            <Link to="/cv-hazirla" className="footer-link">CV Örnekleri</Link>
+                            <Link to="/" className="footer-link">Kariyer Rehberi</Link>
                         </div>
                     </div>
 

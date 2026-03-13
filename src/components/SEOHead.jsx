@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function SEOHead({ title, description, url = 'https://xn--mlakat-3ya.com', type = 'website' }) {
+export default function SEOHead({ title, description, url = 'https://mülakat.com', type = 'website' }) {
     useEffect(() => {
         // Update Title
         if (title) {

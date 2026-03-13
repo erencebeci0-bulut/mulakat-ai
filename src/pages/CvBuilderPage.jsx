@@ -278,9 +278,9 @@ export default function CvBuilderPage() {
     return (
         <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg-primary)', paddingBottom: '100px' }}>
             <SEOHead
-                title="Ücretsiz CV Oluşturucu | Profesyonel CV Hazırla"
-                description="ATS uyumlu, şık ve profesyonel özgeçmişinizi dakikalar içinde ücretsiz oluşturun."
-                url="https://xn--mlakat-3ya.com/cv-hazirla"
+                title="Ücretsiz ATS Uyumlu CV Oluşturucu"
+                description="Yapay zeka analizli, ATS uyumlu (Sistem taraması) Türkçe CV oluştur. Profesyonel PDF şablonu ile iş başvuru şansını hemen artır."
+                url="https://mülakat.com/cv-hazirla"
             />
             <NavBar />
             <Breadcrumbs items={[{ label: 'CV Oluştur', to: '/cv-builder' }]} />

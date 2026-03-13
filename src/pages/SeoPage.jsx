@@ -88,9 +88,9 @@ export default function SeoPage() {
     return (
         <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg-primary)', paddingBottom: '100px' }}>
             <SEOHead
-                title={`${data.title} | En Sık Sorulan Çıkmış Sorular`}
+                title={`${data.title} | mülakat.com`}
                 description={data.desc}
-                url={`https://xn--mlakat-3ya.com/mulakat-sorulari/${role || 'genel'}`}
+                url={`https://mülakat.com/mulakat-sorulari/${role || 'genel'}`}
             />
             <NavBar />
             <Breadcrumbs items={[

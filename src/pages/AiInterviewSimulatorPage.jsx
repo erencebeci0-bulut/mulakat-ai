@@ -2,25 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { Mic, Briefcase, Star, Clock, AlertCircle, Play, Square, CheckCircle, Award, Target, ChevronRight, TrendingUp } from 'lucide-react';
 import NavBar from '../components/NavBar';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEOHead from '../components/SEOHead';
 
-// Mock Questions Database
-const MOCK_QUESTIONS = {
-    'Frontend Developer': [
-        "Bize biraz kendinden ve en gurur duyduğun Frontend projenden bahseder misin?",
-        "React'te state yönetimi için hangi yaklaşımları tercih ediyorsun? Redux, Context API veya Zustand arasında nasıl seçim yaparsın?",
-        "Eğer çok yavaş yüklenen bir sayfayı optimize etmen istenseydi, hangi adımları izlerdin?"
-    ],
-    'Backend Developer': [
-        "Kariyerinden kısaca bahsedip odaklandığın dilleri anlatır mısın?",
-        "Bir yüksek trafikli e-ticaret sitesi için veritabanı seçerken nelere dikkat edersin? SQL ve NoSQL kararı nasıl alınır?",
-        "Mikroservis mimarisinde servisler arası iletişimi güvenli ve hızlı şekilde nasıl kurgularsın?"
-    ],
-    'Genel (İK)': [
-        "Bize kendinden ve son iş deneyiminden bahseder misin?",
-        "Neden mülakat yaptığımız bu pozisyona ve şirketimize başvurdun?",
-        "Zorlandığın bir durumu ve bununla nasıl başa çıktığını anlatır mısın?"
-    ]
-};
+import { ROLES, QUESTIONS } from '../data/questions';
 
 export default function AiInterviewSimulatorPage() {
     const [step, setStep] = useState('setup'); // setup | instruction | interviewing | results
@@ -35,13 +19,14 @@ export default function AiInterviewSimulatorPage() {
     const timerRef = useRef(null);
 
     // Setup Mock Options
-    const roles = ['Frontend Developer', 'Backend Developer', 'Fullstack Developer', 'Data Scientist', 'Genel (İK)', 'Ürün Yöneticisi'];
+    const roles = ROLES.map(r => r.label);
     const levels = ['Junior', 'Mid-Level', 'Senior'];
-    const types = ['Teknik', 'İnsan Kaynakları', 'Vaka (Case Study)'];
+    const types = ['İnsan Kaynakları', 'Teknik', 'Davranışsal', 'Vaka (Case Study)', 'Satış'];
 
     const startInterview = () => {
-        let q = MOCK_QUESTIONS[config.role] || MOCK_QUESTIONS['Genel (İK)'];
-        setQuestions(q);
+        const roleObj = ROLES.find(r => r.label === config.role) || ROLES.find(r => r.id === 'genel');
+        const qList = QUESTIONS[roleObj.id] ? QUESTIONS[roleObj.id].map(q => q.text) : QUESTIONS.genel.map(q => q.text);
+        setQuestions(qList);
         setStep('instruction');
     };
 
@@ -80,10 +65,11 @@ export default function AiInterviewSimulatorPage() {
         setTimeout(() => {
             setEvaluation({
                 score: 82,
-                clarity: 85,
-                structure: 75,
-                confidence: 90,
-                technical: 80,
+                iletisim: 85,
+                star: 75,
+                ozguven: 90,
+                teknik: 80,
+                problemCozme: 85,
                 feedback: [
                     "Kendinizi ifade ederken oldukça net ve özgüvenliydiniz.",
                     "Teknik sorularda genel yaklaşımlarınız doğru ancak daha derin örneklere yer verebilirsiniz.",
@@ -106,6 +92,11 @@ export default function AiInterviewSimulatorPage() {
 
     return (
         <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg-primary)' }}>
+            <SEOHead
+                title="AI Mülakat Simülasyonu | Gerçek İş Görüşmesi Pratiği"
+                description="Yapay zeka asistanıyla gerçekçi mülakat deneyimi yaşa. Türkiye'nin ilk rol bazlı mülakat koçu."
+                url="https://xn--mlakat-3ya.com/ai-interview"
+            />
             <NavBar />
             <Breadcrumbs items={[{ label: 'AI Mülakat Simülasyonu', to: '/ai-interview' }]} />
 
@@ -288,10 +279,11 @@ export default function AiInterviewSimulatorPage() {
                                 </h3>
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
                                     {[
-                                        { label: 'İletişim ve Netlik', score: evaluation.clarity, color: '#3b82f6' },
-                                        { label: 'STAR Metodu ve Yapı', score: evaluation.structure, color: '#f59e0b' },
-                                        { label: 'Özgüven ve Tonlama', score: evaluation.confidence, color: '#10b981' },
-                                        { label: 'Teknik Doğruluk', score: evaluation.technical, color: '#8b5cf6' }
+                                        { label: 'İletişim ve Netlik', score: evaluation.iletisim, color: '#3b82f6' },
+                                        { label: 'STAR Metodu ve Yapı', score: evaluation.star, color: '#f59e0b' },
+                                        { label: 'Özgüven ve Tonlama', score: evaluation.ozguven, color: '#10b981' },
+                                        { label: 'Teknik Doğruluk', score: evaluation.teknik, color: '#8b5cf6' },
+                                        { label: 'Problem Çözme', score: evaluation.problemCozme, color: '#00d4aa' }
                                     ].map(metric => (
                                         <div key={metric.label}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '14px', fontWeight: 600 }}>

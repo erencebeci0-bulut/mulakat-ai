@@ -18,11 +18,11 @@ const ICON_MAP = {
 };
 
 const SUB_LABELS = {
-    iletisim: 'İletişim',
+    iletisim: 'İletişim Netliği',
+    star: 'STAR Metodu',
+    teknik: 'Teknik Doğruluk',
+    ozguven: 'Özgüven',
     problemCozme: 'Problem Çözme',
-    yapiVeNetlik: 'Yapı ve Netlik',
-    motivasyon: 'Motivasyon',
-    roleUygunlugu: 'Role Uygunluğu',
 };
 
 export default function ResultsPage({ sessionData, updateSession }) {

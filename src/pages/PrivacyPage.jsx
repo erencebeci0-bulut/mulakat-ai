@@ -18,7 +18,7 @@ export default function PrivacyPage() {
                         <strong>3. Üçüncü Taraf:</strong> Verdiğiniz yanıtlar, yalnızca AI motoru ile değerlendirme yapmak için güvenli API'lar üzerinden iletilir. Kişisel verileriniz hiçbir reklam veya pazarlama şirketine satılmaz.
                     </p>
                     <p>
-                        <strong>4. İletişim:</strong> E-posta adresinizi bırakmanız halinde, sadece size detaylı AI raporlarınızı veya önemli platform güncellemelerini iletmek için kullanacağız. Spam içerik göndermeyiz.
+                        <strong>4. İletişim:</strong> Gizlilik politikamız hakkında sorularınız için bize istediğiniz zaman <strong>hello@mulakatim.com</strong> adresinden ulaşabilirsiniz. Spam içerik göndermeyiz.
                     </p>
                 </div>
             </div>

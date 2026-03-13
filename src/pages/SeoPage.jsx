@@ -2,6 +2,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { HelpCircle, ChevronRight, MessageSquare, Target, Lightbulb, Wallet, FileText, ArrowRight } from 'lucide-react';
 import NavBar from '../components/NavBar';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SEOHead from '../components/SEOHead';
+import { InterviewIllustration } from '../components/ImagePlaceholders';
 
 const ROLE_DATA = {
     'yazilimci': {
@@ -85,6 +87,11 @@ export default function SeoPage() {
 
     return (
         <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg-primary)', paddingBottom: '100px' }}>
+            <SEOHead
+                title={`${data.title} | En Sık Sorulan Çıkmış Sorular`}
+                description={data.desc}
+                url={`https://xn--mlakat-3ya.com/mulakat-sorulari/${role || 'genel'}`}
+            />
             <NavBar />
             <Breadcrumbs items={[
                 { label: 'Mülakat Soruları', to: '/mulakat-sorulari' },
@@ -99,9 +106,12 @@ export default function SeoPage() {
                     <h1 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '16px', textAlign: 'left' }}>
                         {data.title}
                     </h1>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: 1.6, maxWidth: '800px' }}>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', lineHeight: 1.6, maxWidth: '800px', marginBottom: '32px' }}>
                         {data.desc}
                     </p>
+                    <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--border)', maxWidth: '800px' }}>
+                        <InterviewIllustration style={{ width: '100%', height: 'auto', display: 'block' }} />
+                    </div>
                 </div>
 
                 {/* Info Snippets */}

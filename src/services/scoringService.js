@@ -22,7 +22,7 @@ function hasConcreteExample(text) {
 }
 
 function hasQuantification(text) {
-    return /\d+/.test(text); // Contains numbers — usually a good sign
+    return /\d+/.test(text) || text.includes('%'); // Contains numbers or percent
 }
 
 function hasStructureWords(text) {
@@ -33,16 +33,31 @@ function hasStructureWords(text) {
 
 function hasRoleKeywords(text, role) {
     const roleKeywords = {
-        yazilim: ['kod', 'sistem', 'mimari', 'api', 'debug', 'test', 'performans', 'proje', 'geliştirme', 'yazılım', 'servis', 'veri tabanı', 'algoritma', 'refactor'],
-        urun: ['kullanıcı', 'özellik', 'roadmap', 'metrik', 'paydaş', 'öncelik', 'ürün', 'müşteri', 'kpi', 'strateji', 'sprint', 'feedback', 'hipotez'],
-        pazarlama: ['kampanya', 'kanal', 'içerik', 'dönüşüm', 'seo', 'sosyal medya', 'bütçe', 'marka', 'hedef kitle', 'analytics', 'growth', 'funnel'],
-        satis: ['müşteri', 'satış', 'anlaşma', 'teklife', 'itiraz', 'kapama', 'ikna', 'ilişki', 'pipeline', 'hedef', 'gelir'],
-        veri: ['veri', 'analiz', 'metrik', 'model', 'grafik', 'dashboard', 'sql', 'istatistik', 'insight', 'korelasyon', 'tahmin'],
-        genel: ['takım', 'iletişim', 'hedef', 'başarı', 'öğrendim', 'deneyim', 'proakif', 'çözüm', 'sorumluluk'],
+        frontend: ['react', 'vue', 'js', 'javascript', 'html', 'css', 'dom', 'state', 'component', 'render', 'api', 'tasarım', 'ui', 'ux'],
+        backend: ['node', 'java', 'python', 'api', 'veritabanı', 'sql', 'nosql', 'mikroservis', 'sunucu', 'sistem', 'performans', 'güvenlik'],
+        fullstack: ['frontend', 'backend', 'full stack', 'api', 'veritabanı', 'react', 'node', 'mimari', 'sistem', 'entegrasyon'],
+        veri: ['veri', 'analiz', 'metrik', 'model', 'grafik', 'dashboard', 'sql', 'istatistik', 'insight', 'korelasyon', 'tahmin', 'rapor'],
+        urun: ['kullanıcı', 'özellik', 'roadmap', 'metrik', 'paydaş', 'öncelik', 'ürün', 'müşteri', 'kpi', 'strateji', 'sprint', 'feedback'],
+        satis: ['müşteri', 'satış', 'anlaşma', 'teklif', 'itiraz', 'kapama', 'ikna', 'ilişki', 'pipeline', 'hedef', 'gelir', 'b2b', 'b2c'],
+        cagri: ['müşteri', 'çözüm', 'iletişim', 'şikayet', 'hizmet', 'memnuniyet', 'sürec', 'destek', 'çağrı', 'yardım', 'dinleme'],
+        ik: ['işe alım', 'kültür', 'aday', 'performans', 'görüşme', 'bağlılık', 'kariyer', 'çalışan', 'takım', 'motivasyon', 'ik', 'süreç'],
+        banka: ['finans', 'kredi', 'müşteri', 'hesap', 'gişe', 'operasyon', 'risk', 'portföy', 'yatırım', 'şube', 'hedef'],
+        mezun: ['öğrenme', 'gelişim', 'motivasyon', 'hedef', 'proje', 'üniversite', 'takım', 'kulüp', 'istek', 'çaba'],
+        genel: ['takım', 'iletişim', 'hedef', 'başarı', 'öğrendim', 'deneyim', 'proaktif', 'çözüm', 'sorumluluk', 'problem']
     };
     const keywords = roleKeywords[role] || roleKeywords.genel;
     const lower = text.toLowerCase();
     return keywords.filter(k => lower.includes(k)).length;
+}
+
+function getConfidenceScore(text) {
+    const lower = text.toLowerCase();
+    const weakWords = ['sanırım', 'galiba', 'belki', 'gibi', 'emin değilim', 'hatırlamıyorum', 'yaani', 'şimdilik'];
+    const weakCount = weakWords.filter(w => lower.includes(w)).length;
+    let score = 8;
+    score -= weakCount * 2;
+    if (meaningfulWordCount(text) > 40) score += 2;
+    return Math.max(1, Math.min(10, score));
 }
 
 export function scoreAnswer(answer, role, questionType) {
@@ -51,7 +66,7 @@ export function scoreAnswer(answer, role, questionType) {
             score: 1,
             feedback: 'Cevabınız çok kısa veya boş gibi görünüyor. Daha detaylı bir yanıt vermenizi öneririz.',
             suggestion: 'STAR yöntemi (Durum, Görev, Aksiyon, Sonuç) kullanarak cevabınızı genişletin.',
-            breakdown: { clarity: 1, structure: 1, relevance: 1, example: 1, persuasion: 1 },
+            breakdown: { clarity: 1, structure: 1, technical: 1, confidence: 1, problemSolving: 1 },
         };
     }
 
@@ -63,52 +78,48 @@ export function scoreAnswer(answer, role, questionType) {
     const roleKw = hasRoleKeywords(answer, role);
     const sentenceStructure = hasSentenceStructure(answer);
 
-    // Clarity: Word count + meaningful words
+    // 1. Communication Clarity
     let clarity = 3;
-    if (wc >= 50) clarity += 1;
-    if (wc >= 100) clarity += 1;
-    if (mwc >= 30) clarity += 1;
+    if (wc >= 40) clarity += 2;
+    if (wc >= 80) clarity += 2;
+    if (mwc >= 30) clarity += 2;
     if (sentenceStructure) clarity += 1;
     clarity = Math.min(clarity, 10);
 
-    // Structure: Logical connectors + sentence organization
+    // 2. STAR Structure
     let structure = 3;
-    if (structureScore >= 1) structure += 1;
-    if (structureScore >= 2) structure += 1;
-    if (wc >= 80) structure += 1;
-    if (hasNumbers) structure += 1;
+    if (structureScore >= 1) structure += 2;
+    if (structureScore >= 2) structure += 3;
+    if (hasExample && structureScore >= 1) structure += 2;
     structure = Math.min(structure, 10);
 
-    // Relevance: Role-specific keywords
-    let relevance = 3;
-    if (roleKw >= 1) relevance += 1;
-    if (roleKw >= 2) relevance += 1;
-    if (roleKw >= 3) relevance += 1;
-    if (questionType === 'role' && roleKw >= 2) relevance += 1;
-    relevance = Math.min(relevance, 10);
+    // 3. Technical Correctness (Role Relevance)
+    let technical = 3;
+    if (roleKw >= 1) technical += 2;
+    if (roleKw >= 3) technical += 3;
+    if (questionType === 'role' && roleKw >= 2) technical += 2;
+    technical = Math.min(technical, 10);
 
-    // Example: Concrete evidence
-    let example = 3;
-    if (hasExample) example += 3;
-    if (hasNumbers) example += 2;
-    if (wc >= 100 && hasExample) example += 1;
-    example = Math.min(example, 10);
+    // 4. Confidence
+    let confidence = getConfidenceScore(answer);
 
-    // Persuasion: Combination
-    let persuasion = Math.round((clarity + structure + relevance + example) / 4);
+    // 5. Problem Solving
+    let problemSolving = 3;
+    if (hasExample) problemSolving += 4;
+    if (hasNumbers) problemSolving += 2;
+    if (wc >= 60 && hasExample) problemSolving += 1;
+    problemSolving = Math.min(problemSolving, 10);
 
-    const rawScore = (clarity * 0.2 + structure * 0.2 + relevance * 0.25 + example * 0.25 + persuasion * 0.1);
-
-    // Normalize to 1-10 with slight variation
+    const rawScore = (clarity * 0.2 + structure * 0.2 + technical * 0.2 + confidence * 0.2 + problemSolving * 0.2);
     const score = Math.max(1, Math.min(10, Math.round(rawScore * 10) / 10));
 
-    const { feedback, suggestion } = generateFeedback(score, { clarity, structure, relevance, example }, role, questionType);
+    const { feedback, suggestion } = generateFeedback(score, { clarity, structure, technical, confidence, problemSolving }, role, questionType);
 
     return {
         score,
         feedback,
         suggestion,
-        breakdown: { clarity, structure, relevance, example, persuasion },
+        breakdown: { clarity, structure, technical, confidence, problemSolving },
     };
 }
 
@@ -116,35 +127,35 @@ function generateFeedback(score, dims, role, qType) {
     const feedbacks = {
         high: [
             'Cevabınız oldukça güçlü. Somut örnekler ve yapılandırılmış bir anlatım kullandınız.',
-            'Etkileyici bir yanıt. Deneyimlerinizi net ve ikna edici biçimde aktardınız.',
-            'Cevabınız profesyonel ve role uygun. Güçlü bir adayın izlenimini yaratıyor.',
+            'Etkileyici bir yanıt. Deneyimlerinizi net ve özgüvenli biçimde aktardınız.',
+            'Cevabınız profesyonel ve role uygun. Teknik terminolojiyi yerinde kullandınız.',
         ],
         mid: [
-            'Cevabınız iyi bir temele sahip, ancak somut örnek eklemek yanıtı güçlendirecektir.',
-            'Düşüncelerinizi iyi ifade ettiniz. Biraz daha yapısal kurgu ve sayısal destek ekleyebilirsiniz.',
-            'Mantıklı bir yanıt. İçeriği biraz daha derinleştirirseniz çok daha güçlü olur.',
+            'Cevabınız iyi bir temele sahip, ancak somut bir örnek eklemek yanıtı güçlendirecektir.',
+            'Düşüncelerinizi iyi ifade ettiniz. STAR formatına (Durum, Aksiyon, Sonuç) daha fazla odaklanabilirsiniz.',
+            'Mantıklı bir yanıt. Teknik detayları veya role özgü terimleri artırırsanız çok daha güçlü olur.',
         ],
         low: [
             'Cevabınız başlangıç noktası olarak iyi, ancak daha fazla detay ve örnek gerekiyor.',
             'Temel fikri yakaladınız, ama yanıtı somutlaştırmak için deneyimlerinizden örnekler ekleyin.',
-            'Doğru yönde bir başlangıç. Cevabın yapısını ve içeriğini zenginleştirmeniz önerilir.',
+            'Doğru yönde bir başlangıç. Lütfen daha net ifadeler ve profesyonel terimler kullanarak yanıtınızı zenginleştirin.',
         ],
     };
 
     const suggestions = {
         high: [
-            'Rakamsal verilerle desteklenmiş örnekler eklenirse cevap daha da güçlü olur.',
-            'Öğrendiklerinizi vurgulayarak refleksif düşünceyi öne çıkarabilirsiniz.',
+            'Rakamsal veriler (örn: %30 artış) eklenirse cevap daha da ikna edici olur.',
+            'Öğrendiklerinizi vurgulayarak kriz yönetimi yönünüzü öne çıkarabilirsiniz.',
         ],
         mid: [
             'STAR yöntemi (Durum, Görev, Aksiyon, Sonuç) ile anlatımı yapılandırmayı deneyin.',
-            'Ölçülebilir bir etki veya sonuç ekleyerek cevabı güçlendirin.',
-            'Daha spesifik örnekler verin — genel ifadeler yerine somut durumlar kullanın.',
+            'Ölçülebilir bir etki veya sonuç ekleyerek problem çözme yeteneğinizi gösterin.',
+            'Genel ifadeler yerine spesifik bir projenizden bahsedin.',
         ],
         low: [
-            'En az bir gerçek iş deneyimini örnek olarak anlatın.',
-            'Yanıtı en az 3-4 cümleyle genişletin ve role özel terimler kullanın.',
-            'STAR yöntemi: Durumu, görevinizi, aksiyonlarınızı ve sonucu açıklayın.',
+            'En az bir gerçek iş veya okul deneyimini somut örnek olarak anlatın.',
+            'Yanıtı biraz daha uzun tutun ve role özel terimler (sektör dili) kullanın.',
+            'Durumu, aldığınız aksiyonu ve elde ettiğiniz sonucu (STAR) sırasıyla açıklayın.',
         ],
     };
 
@@ -159,62 +170,69 @@ function generateFeedback(score, dims, role, qType) {
 }
 
 export function generateFinalReport(answers, role, cvText) {
+    if (!answers || answers.length === 0) {
+        return null;
+    }
+
     const scores = answers.map(a => a.score);
     const avg = scores.reduce((s, n) => s + n, 0) / scores.length;
     const finalScore = Math.round(avg * 10) / 10;
 
     // Subscores
     const avgBreakdown = answers.reduce((acc, a) => {
-        Object.keys(a.breakdown).forEach(k => {
-            acc[k] = (acc[k] || 0) + a.breakdown[k];
-        });
+        if (a.breakdown) {
+            Object.keys(a.breakdown).forEach(k => {
+                acc[k] = (acc[k] || 0) + a.breakdown[k];
+            });
+        }
         return acc;
     }, {});
+
     Object.keys(avgBreakdown).forEach(k => {
         avgBreakdown[k] = Math.round((avgBreakdown[k] / answers.length) * 10) / 10;
     });
 
     const subscores = {
-        iletisim: avgBreakdown.clarity,
-        problemCozme: avgBreakdown.relevance,
-        yapiVeNetlik: avgBreakdown.structure,
-        motivasyon: avgBreakdown.persuasion,
-        roleUygunlugu: avgBreakdown.example,
+        iletisim: avgBreakdown.clarity || 0,
+        star: avgBreakdown.structure || 0,
+        teknik: avgBreakdown.technical || 0,
+        ozguven: avgBreakdown.confidence || 0,
+        problemCozme: avgBreakdown.problemSolving || 0,
     };
 
     const strengths = [];
     const weaknesses = [];
 
-    if (subscores.iletisim >= 7) strengths.push('Kendinizi net ve anlaşılır biçimde ifade ediyorsunuz.');
-    else weaknesses.push('İletişim netliğinizi ve cevap uzunluğunuzu artırmanız önerilir.');
+    if (subscores.iletisim >= 7) strengths.push('Kendinizi net, anlaşılır ve akıcı biçimde ifade ediyorsunuz.');
+    else weaknesses.push('İletişim netliğinizi ve cevap detaylandırmanızı artırmanız önerilir.');
 
-    if (subscores.problemCozme >= 7) strengths.push('Role özgü bilgi ve terminoloji kullanımınız güçlü.');
-    else weaknesses.push('Role özgü bilgi ve terminoloji kullanımınızı geliştirmeniz gerekiyor.');
+    if (subscores.teknik >= 7) strengths.push('Role özgü teknik bilgi ve sektörel terminoloji kullanımınız çok güçlü.');
+    else weaknesses.push('Seçtiğiniz role özgü teknik detaylara ve kavramlara daha fazla yer vermelisiniz.');
 
-    if (subscores.yapiVeNetlik >= 7) strengths.push('Cevaplarınız mantıklı bir yapı ve akış içeriyor.');
-    else weaknesses.push('Cevaplarınızı daha yapısal (başlangıç, gelişme, sonuç) sunmaya çalışın.');
+    if (subscores.star >= 7) strengths.push('Cevaplarınız STAR metodolojisine uygun, iyi yapılandırılmış bir akış içeriyor.');
+    else weaknesses.push('Cevaplarınızı bağlam, aksiyon ve sonuç (STAR) formatında kurgulamaya çalışın.');
 
-    if (subscores.motivasyon >= 7) strengths.push('İkna edici ve motivasyonlu bir tutum sergiliyorsunuz.');
-    else weaknesses.push('Daha somut örnekler ve somut sonuçlarla motivasyonunuzu kanıtlayın.');
+    if (subscores.ozguven >= 7) strengths.push('Cevaplarınızda tereddütsüz, ikna edici ve özgüvenli bir tutum sergiliyorsunuz.');
+    else weaknesses.push('Tereddüt belirten kelimeleri (sanırım, galiba) azaltarak özgüveninizi yansıtın.');
 
-    if (subscores.roleUygunlugu >= 7) strengths.push('Gerçek deneyimlerden somut örnekler veriyorsunuz.');
-    else weaknesses.push('Yanıtlarınızı somut iş deneyimleri ve örneklerle zenginleştirin.');
+    if (subscores.problemCozme >= 7) strengths.push('Somut örnekler ve verilerle problem çözme yeteneğinizi başarıyla kanıtlıyorsunuz.');
+    else weaknesses.push('Karşılaştığınız problemleri nasıl çözdüğünüzü rakamlar ve somut örneklerle anlatın.');
 
-    if (strengths.length === 0) strengths.push('Temel soruları yanıtlayabildiniz ve süreci tamamladınız.');
-    if (weaknesses.length === 0) weaknesses.push('Genel olarak güçlü bir performans — ufak tefek detayları rafine etmeyi sürdürün.');
+    if (strengths.length === 0) strengths.push('Temel soruları yanıtlayarak mülakat deneyimi kazandınız.');
+    if (weaknesses.length === 0) weaknesses.push('Genel olarak çok güçlü bir performans; ufak iyileştirmelerle mükemmele ulaşabilirsiniz.');
 
     const summaries = {
-        high: `Mülakatı güçlü bir performansla tamamladınız. Cevaplarınız genellikle yapılandırılmış, ikna edici ve role uygundu. İşe alım süreçlerinde rekabetçi bir aday olduğunuzu gösterdiniz.`,
-        mid: `Mülakatta genel olarak tatmin edici bir performans sergilendi. Bazı cevaplarınız oldukça güçlüyken, bir kısmı daha fazla derinlik ve somut örnek gerektiriyor. Hazırlık düzeyinizi artırarak bu skorun üstüne çıkabilirsiniz.`,
-        low: `Mülakata hazırlık sürecinizin başındaysınız. Temel soruları yanıtlayabildiniz ancak cevaplarınız daha fazla somutluk, yapı ve role özgü bilgi gerektiriyor. Bu platformu tekrar kullanarak ilerlemenizi takip edebilirsiniz.`,
+        high: `Mülakatı üst düzey bir performansla tamamladınız. Cevaplarınız yapılandırılmış, özgüvenli ve teknik açıdan oldukça tatmin ediciydi. Gerçek mülakatlarda güçlü ve rekabetçi bir adaysınız.`,
+        mid: `Mülakatta genel olarak iyi bir izlenim bıraktınız. Sağlam bir temeliniz var ancak yetkinliklerinizi daha net yansıtmak için STAR metodunu kullanarak somut örneklere ağırlık vermelisiniz.`,
+        low: `Mülakat becerilerinizi geliştirme sürecindesiniz. Cevaplarınızın etkisini artırmak için daha uzun yanıtlar vermeli, teknik terimleri daha sık kullanmalı ve gerçek deneyimlerinizden örnekler sunmalısınız.`,
     };
 
     const coachingTips = [
         'Her cevabı STAR yöntemiyle yapılandırın: Durum → Görev → Aksiyon → Sonuç.',
-        'Mümkün olduğunca sayısal veriler ve ölçülebilir sonuçlar ekleyin.',
+        'Mümkün olduğunca sayısal veriler ve ölçülebilir sonuçlar ekleyin (örn: %20 artış).',
         'Role özgü terimler ve sektör dili kullanmaya özen gösterin.',
-        'Her cevabı 100-200 kelime arasında tutmayı hedefleyin: Çok kısa veya çok uzun olmadan.',
-        'Yanıtlarınıza "Bu deneyimden şunu öğrendim" gibi refleksif kapanışlar ekleyin.',
+        'Her cevabı 100-200 kelime arasında tutmayı hedefleyin: Çok yüzeysel geçmeyin.',
+        'Tereddütlü ifadeler ("gibi", "sanırım") yerine net cümleler ("yaptım", "karar verdim") kullanın.',
     ];
 
     // CV analysis if available
@@ -246,7 +264,7 @@ function generateCvAnalysis(cvText, role) {
     const hasSkills = /beceri|yetenek|teknoloji|araç|program|dil/i.test(cvText);
 
     return {
-        ozet: wc > 100 ? 'CV\'niz yeterli içerik barındırıyor ve temel bölümleri kapsıyor.' : 'CV\'niz oldukça kısa görünüyor. İçeriki zenginleştirmeniz önerilir.',
+        ozet: wc > 100 ? "CV'niz yeterli içerik barındırıyor ve temel bölümleri kapsıyor." : "CV'niz oldukça kısa görünüyor. İçeriği zenginleştirmeniz önerilir.",
         gucluTaraflar: [
             hasEducation ? 'Eğitim bilgileri mevcut.' : null,
             hasExperience ? 'İş deneyimi bölümü var.' : null,
@@ -261,7 +279,7 @@ function generateCvAnalysis(cvText, role) {
         roleUyumu: `CV içeriği ${role === 'genel' ? 'genel pozisyonlara' : 'seçtiğiniz role'} kısmen uygun görünüyor. Daha fazla role özgü anahtar kelime kullanmanız önerilir.`,
         cvOneriler: [
             'Her iş deneyimine ölçülebilir başarı maddeleri ekleyin.',
-            'CV\'nizi hedef role özel anahtar kelimelerle optimize edin.',
+            "CV'nizi hedef role özel anahtar kelimelerle optimize edin.",
             'ATS (Aday Takip Sistemi) uyumlu sade bir format tercih edin.',
         ],
     };

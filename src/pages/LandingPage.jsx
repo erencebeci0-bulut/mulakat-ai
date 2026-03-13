@@ -6,6 +6,7 @@ import {
     ChevronRight
 } from 'lucide-react';
 import NavBar from '../components/NavBar';
+import SEOHead from '../components/SEOHead';
 
 const POPULAR_TOOLS = [
     { icon: DollarSign, title: 'Maaş Hesaplama', desc: 'Sektör ve tecrübeye göre net maaşını hesapla.', href: '/maas-hesaplama', color: '#10b981', bg: 'rgba(16,185,129,0.1)', badge: null },
@@ -26,12 +27,12 @@ const INTERVIEW_QUESTIONS = [
 ];
 
 const SALARIES = [
-    { title: 'Yazılım Mühendisi', range: '₺45.000 - ₺120.000', href: '/maas/yazilimci' },
-    { title: 'Öğretmen', range: '₺35.000 - ₺45.000', href: '/maas/ogretmen' },
-    { title: 'Bankacı', range: '₺30.000 - ₺65.000', href: '/maas/bankaci' },
-    { title: 'Makine Mühendisi', range: '₺40.000 - ₺85.000', href: '/maas/muhendis' },
-    { title: 'Polis Memuru', range: '₺42.000 - ₺55.000', href: '/maas/polis' },
-    { title: 'Hemşire', range: '₺38.000 - ₺55.000', href: '/maas/hemsire' },
+    { title: 'Yazılım Mühendisi', range: '₺45.000 - ₺120.000', href: '/yazilim-muhendisi-maasi' },
+    { title: 'Frontend Developer', range: '₺40.000 - ₺100.000', href: '/frontend-developer-maasi' },
+    { title: 'Backend Developer', range: '₺45.000 - ₺120.000', href: '/backend-developer-maasi' },
+    { title: 'Veri Analisti', range: '₺35.000 - ₺85.000', href: '/veri-analisti-maasi' },
+    { title: 'Ürün Yöneticisi', range: '₺50.000 - ₺130.000', href: '/urun-yoneticisi-maasi' },
+    { title: 'Çağrı Merkezi', range: '₺18.500 - ₺32.000', href: '/cagri-merkezi-maasi' },
 ];
 
 const COMPANIES = ['Trendyol', 'Hepsiburada', 'Amazon', 'Garanti BBVA', 'Migros', 'Aselsan', 'Türk Hava Yolları', 'Koç Holding'];
@@ -41,88 +42,101 @@ export default function LandingPage() {
 
     return (
         <div style={{ minHeight: '100vh', background: 'var(--bg-primary)' }}>
+            <SEOHead
+                title="Mülakat Hazırlığı, Maaş Hesaplama ve CV Oluşturma | Mülakat.com"
+                description="Mülakat simülasyonları, maaş araştırmaları ve iş hayatı rehberi. Türkiye'nin ücretsiz kariyer veri platformu."
+                url="https://xn--mlakat-3ya.com"
+            />
             <NavBar />
 
             {/* 1. HERO SECTION */}
-            <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 24px 60px', position: 'relative' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '60px', alignItems: 'center' }}>
+            <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '120px 24px 80px', position: 'relative' }}>
+                {/* Ambient Background Glow */}
+                <div style={{ position: 'absolute', top: '-10%', left: '50%', transform: 'translateX(-50%)', width: '800px', height: '500px', background: 'radial-gradient(circle, rgba(109, 93, 252, 0.08) 0%, transparent 70%)', zIndex: 0, pointerEvents: 'none' }} />
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '80px', alignItems: 'center', position: 'relative', zIndex: 1 }}>
 
                     {/* Hero Text */}
                     <div style={{ zIndex: 10 }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
-                            <span className="badge badge-accent" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                                <Zap size={14} /> Türkiye'nin Kariyer Veri Platformu
+                            <span className="badge badge-accent" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '6px 14px', fontSize: '13px', border: '1px solid rgba(109, 93, 252, 0.3)' }}>
+                                <Zap size={14} color="var(--accent)" /> Türkiye'nin Lider Kariyer & AI Platformu
                             </span>
                         </div>
                         <h1 style={{
-                            fontSize: 'clamp(2.4rem, 5vw, 4rem)', fontWeight: 800,
-                            lineHeight: 1.15, marginBottom: '24px', color: 'var(--text-primary)',
-                            letterSpacing: '-0.02em'
+                            fontSize: 'clamp(2.8rem, 6vw, 4.5rem)', fontWeight: 900,
+                            lineHeight: 1.1, marginBottom: '24px', color: 'var(--text-primary)',
+                            letterSpacing: '-0.03em'
                         }}>
-                            Kariyerini <span className="gradient-text">Verilerle</span> Yönet
+                            Kariyerini <span className="gradient-text" style={{ textShadow: '0 0 40px rgba(109, 93, 252, 0.3)' }}>Verilerle</span> Yönet.
                         </h1>
                         <p style={{
-                            fontSize: '1.15rem', color: 'var(--text-secondary)',
-                            marginBottom: '40px', lineHeight: 1.7, maxWidth: '540px'
+                            fontSize: '1.25rem', color: 'var(--text-secondary)',
+                            marginBottom: '40px', lineHeight: 1.6, maxWidth: '540px'
                         }}>
-                            Mülakat sorularını öğren, maaşını hesapla, CV'ni oluştur,
-                            iş hayatı verilerine tamamen <strong>ücretsiz</strong> ulaş.
+                            Mülakat sorularını öğren, maaşını hesapla, CV'ni oluştur ve
+                            iş hayatı verilerine tamamen <strong>ücretsiz</strong>, reklamsız ulaş.
                         </p>
 
                         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                            <button className="btn btn-primary" onClick={() => navigate('/maas-hesaplama')} style={{ fontSize: '15px', padding: '14px 28px' }}>
-                                <DollarSign size={18} /> Maaşını Hesapla
+                            <button className="btn btn-primary" onClick={() => navigate('/ai-interview')} style={{ fontSize: '16px', padding: '16px 32px', borderRadius: '12px' }}>
+                                <Mic size={20} /> AI Mülakata Başla
                             </button>
-                            <button className="btn btn-secondary" onClick={() => navigate('/cv-hazirla')} style={{ fontSize: '15px', padding: '14px 28px' }}>
-                                <FileText size={18} /> CV Oluştur
+                            <button className="btn btn-secondary" onClick={() => navigate('/maas-hesaplama')} style={{ fontSize: '16px', padding: '16px 32px', borderRadius: '12px', background: 'var(--bg-card)' }}>
+                                <DollarSign size={20} /> Maaş Hesapla
                             </button>
-                            <button className="btn btn-ghost" onClick={() => navigate('/ai-interview')} style={{ fontSize: '15px', padding: '14px 28px', border: '1px solid var(--border)' }}>
-                                <Mic size={18} color="var(--accent)" /> AI Mülakat Yap
-                            </button>
+                        </div>
+
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginTop: '36px', fontSize: '14px', color: 'var(--text-muted)' }}>
+                            <div style={{ display: 'flex', gap: '-10px' }}>
+                                {[1, 2, 3, 4].map(i => <div key={i} style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--border), var(--border-light))', border: '2px solid var(--bg-primary)', zIndex: 5 - i, marginLeft: i === 1 ? 0 : '-12px' }} />)}
+                            </div>
+                            <span><strong style={{ color: 'var(--text-primary)' }}>10.000+</strong> aday hazırlandı</span>
                         </div>
                     </div>
 
                     {/* Hero Illustration (Abstract Visual System) */}
-                    <div style={{ position: 'relative', width: '100%', height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <div style={{ position: 'relative', width: '100%', height: '420px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <div style={{
-                            position: 'absolute', width: '300px', height: '300px',
+                            position: 'absolute', width: '340px', height: '340px',
                             background: 'linear-gradient(135deg, rgba(108,99,255,0.4), rgba(0,212,170,0.4))',
-                            borderRadius: '50%', filter: 'blur(60px)', zIndex: 0
+                            borderRadius: '50%', filter: 'blur(70px)', zIndex: 0
                         }} />
 
                         <div className="glass-card" style={{
-                            position: 'relative', zIndex: 1, padding: '24px', borderRadius: '24px',
-                            boxShadow: '0 20px 40px rgba(0,0,0,0.1)', width: '100%', maxWidth: '380px'
+                            position: 'relative', zIndex: 1, padding: '28px', borderRadius: '24px',
+                            boxShadow: '0 24px 50px rgba(0,0,0,0.2)', width: '100%', maxWidth: '400px',
+                            border: '1px solid rgba(255,255,255,0.08)'
                         }}>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                    <div style={{ width: '40px', height: '40px', borderRadius: '12px', background: 'var(--accent-glow)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                        <Mic size={20} color="var(--accent)" />
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '28px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                                    <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: 'var(--accent-glow)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        <Mic size={24} color="var(--accent)" />
                                     </div>
                                     <div>
-                                        <div style={{ fontSize: '14px', fontWeight: 600 }}>Yazılım Mülakatı</div>
-                                        <div style={{ fontSize: '12px', color: 'var(--success)' }}>Bağlantı Kuruldu</div>
+                                        <div style={{ fontSize: '15px', fontWeight: 700 }}>Yazılım Mülakatı</div>
+                                        <div style={{ fontSize: '13px', color: 'var(--success)' }}>Bağlantı Kuruldu</div>
                                     </div>
                                 </div>
-                                <div className="loading-pulse" style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--success)' }} />
+                                <div className="loading-pulse" style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var(--success)' }} />
                             </div>
 
-                            <div style={{ background: 'var(--bg-secondary)', borderRadius: '12px', padding: '16px', marginBottom: '16px' }}>
-                                <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '8px' }}>"Bize karşılaştığın en zor teknik problemi anlatır mısın?"</div>
+                            <div style={{ background: 'var(--bg-secondary)', borderRadius: '16px', padding: '20px', marginBottom: '20px', border: '1px solid var(--border)' }}>
+                                <div style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '12px', lineHeight: 1.6 }}>"Bize karşılaştığın en zor teknik problemi ve nasıl çözdüğünü anlatır mısın?"</div>
                                 <div style={{ display: 'flex', gap: '4px' }}>
                                     <div style={{ height: '4px', width: '30%', background: 'var(--accent)', borderRadius: '2px' }} />
                                     <div style={{ height: '4px', width: '70%', background: 'var(--border)', borderRadius: '2px' }} />
                                 </div>
                             </div>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-                                <div style={{ background: 'var(--bg-secondary)', borderRadius: '12px', padding: '12px', textAlign: 'center' }}>
-                                    <div style={{ fontSize: '18px', fontWeight: 700 }}>8.5/10</div>
-                                    <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Mülakat Skoru</div>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                                <div style={{ background: 'var(--bg-secondary)', borderRadius: '16px', padding: '16px', textAlign: 'center', border: '1px solid var(--border)' }}>
+                                    <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)' }}>8.5/10</div>
+                                    <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Mülakat Skoru</div>
                                 </div>
-                                <div style={{ background: 'var(--bg-secondary)', borderRadius: '12px', padding: '12px', textAlign: 'center' }}>
-                                    <div style={{ fontSize: '18px', fontWeight: 700 }}>%92</div>
-                                    <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>İşle Eşleşme</div>
+                                <div style={{ background: 'var(--bg-secondary)', borderRadius: '16px', padding: '16px', textAlign: 'center', border: '1px solid var(--border)' }}>
+                                    <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--success)' }}>%92</div>
+                                    <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>İşle Eşleşme</div>
                                 </div>
                             </div>
                         </div>
@@ -131,14 +145,15 @@ export default function LandingPage() {
             </section>
 
             {/* 9. SPONSORS / FEATURED COMPANIES (Moved up for trust building) */}
-            <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '40px 24px', background: 'var(--bg-secondary)' }}>
-                <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
-                    <p style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--text-muted)', fontWeight: 600, marginBottom: '24px' }}>
-                        Verilerini analiz ettiğimiz şirketler
+            <section style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '48px 24px', background: 'var(--bg-primary)', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '400px', height: '1px', background: 'linear-gradient(90deg, transparent, var(--accent), transparent)', opacity: 0.5 }} />
+                <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
+                    <p style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1.5px', color: 'var(--text-muted)', fontWeight: 700, marginBottom: '32px' }}>
+                        Verilerini analiz ettiğimiz ve çözümler ürettiğimiz şirketler
                     </p>
-                    <div style={{ display: 'flex', gap: '40px', justifyContent: 'center', flexWrap: 'wrap', opacity: 0.6 }}>
+                    <div style={{ display: 'flex', gap: '48px', justifyContent: 'center', flexWrap: 'wrap', opacity: 0.6, filter: 'grayscale(100%)' }}>
                         {COMPANIES.slice(0, 6).map(c => (
-                            <span key={c} style={{ fontSize: '18px', fontWeight: 700, color: 'var(--text-primary)' }}>{c}</span>
+                            <span key={c} style={{ fontSize: '19px', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.5px' }}>{c}</span>
                         ))}
                     </div>
                 </div>
@@ -146,9 +161,10 @@ export default function LandingPage() {
 
             {/* 2. POPULAR TOOLS SECTION */}
             <section id="araclar" style={{ maxWidth: '1200px', margin: '0 auto', padding: '100px 24px' }}>
-                <div style={{ textAlign: 'center', marginBottom: '56px' }}>
-                    <h2 className="section-title">En Popüler Araçlar</h2>
-                    <p className="section-sub">Kariyer planlamanızı yaparken ihtiyacınız olan her şey tek bir yerde.</p>
+                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <div className="badge badge-accent" style={{ marginBottom: '16px', border: '1px solid rgba(109, 93, 252, 0.3)' }}>1. Kariyer Araçları</div>
+                    <h2 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800 }}>Mülakat ve İş Başvuru Araçları</h2>
+                    <p className="section-sub" style={{ fontSize: '1.15rem' }}>Mülakatlara hazırlanın, profesyonel CV'nizi oluşturun ve haklarınızı anında hesaplayın.</p>
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
@@ -179,30 +195,35 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* 2.5 SPONSOR CARD */}
+            {/* 2.5 PLATFORM CARD */}
             <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px 100px' }}>
                 <div className="card glass-card hover-lift" style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', alignItems: 'center', justifyContent: 'space-between', padding: '40px', background: 'linear-gradient(135deg, rgba(59,130,246,0.1), rgba(139,92,246,0.1))', border: '1px solid rgba(139,92,246,0.2)' }}>
                     <div style={{ flex: 1, minWidth: '300px' }}>
-                        <div className="badge badge-accent" style={{ background: 'var(--accent)', color: '#fff', border: 'none', marginBottom: '16px' }}>Sponsorlu</div>
+                        <div className="badge badge-accent" style={{ background: 'var(--accent)', color: '#fff', border: 'none', marginBottom: '16px' }}>Öne Çıkan</div>
                         <h3 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '16px', color: 'var(--text-primary)' }}>Kariyerinde Bir Adım Öne Geç</h3>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.6, marginBottom: '24px' }}>
-                            Türkiye'nin en iyi teknoloji şirketlerinde ücretsiz mülakat deneyimi yaşa, Bootcamp'lere katıl ve hemen işe başla.
+                            Gerçek mülakat deneyimlerine eriş, AI ile sınırlarını zorla ve şirket mülakatlarından çekinmeden hayalindeki işi kap.
                         </p>
-                        <button className="btn btn-primary" style={{ display: 'inline-flex', padding: '14px 28px', background: 'var(--text-primary)', color: 'var(--bg-primary)' }}>
-                            Fırsatları İncele <ArrowRight size={18} style={{ marginLeft: '8px' }} />
+                        <button className="btn btn-primary" onClick={() => navigate('/ai-interview')} style={{ display: 'inline-flex', padding: '14px 28px', background: 'var(--text-primary)', color: 'var(--bg-primary)' }}>
+                            Platformu Keşfet <ArrowRight size={18} style={{ marginLeft: '8px' }} />
                         </button>
                     </div>
                     <div style={{ width: '100%', maxWidth: '300px', height: '200px', background: 'var(--bg-card)', borderRadius: '16px', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)', boxShadow: '0 10px 30px rgba(0,0,0,0.2)' }}>
                         <div style={{ textAlign: 'center' }}>
-                            <div style={{ fontSize: '32px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '8px' }}>Patika.dev</div>
-                            <div style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent)' }}>Eğitim Partneri</div>
+                            <div style={{ fontSize: '32px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '8px' }}>mülakat<span style={{ color: 'var(--accent)' }}>.com</span></div>
+                            <div style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '2px', color: 'var(--accent)' }}>Kariyer Pusulanız</div>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* 3 & 4. DUAL COLUMN: QUESTIONS & SALARIES */}
-            <section style={{ background: 'var(--bg-secondary)', padding: '100px 24px', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+            <section style={{ background: 'var(--bg-secondary)', padding: '100px 24px', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', position: 'relative' }}>
+                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <div className="badge badge-accent" style={{ marginBottom: '16px', background: 'rgba(0,212,170,0.1)', color: 'var(--success)', border: '1px solid rgba(0,212,170,0.3)' }}>2. Kariyer Veri Platformu</div>
+                    <h2 className="section-title" style={{ maxWidth: '600px', margin: '0 auto 16px', fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontWeight: 800 }}>Piyasa Maaşları ve Soru Havuzu</h2>
+                    <p className="section-sub" style={{ fontSize: '1.15rem' }}>Adaylar tarafından eklenen binlerce gerçek mülakat sorusuna ve 2026 güncel maaş verisine ücretsiz ulaşın.</p>
+                </div>
                 <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '48px' }}>
 
                     {/* 3. MOST SEARCHED INTERVIEW QUESTIONS */}
@@ -522,17 +543,25 @@ export default function LandingPage() {
                             <Link to="/hakkimizda" className="footer-link">Hakkımızda</Link>
                             <Link to="/iletisim" className="footer-link">İletişim</Link>
                             <Link to="/privacy" className="footer-link">Gizlilik Politikası</Link>
+                            <Link to="/kvkk" className="footer-link">KVKK ve Aydınlatma</Link>
+                            <Link to="/cerez-politikasi" className="footer-link">Çerez Politikası</Link>
+                            <Link to="/icerik-kaldirma" className="footer-link">İçerik Kaldırma Talebi</Link>
                             <Link to="/disclaimer" className="footer-link">Yasal Uyarı (Disclaimer)</Link>
                             <Link to="/terms" className="footer-link">Kullanım Koşulları</Link>
                         </div>
                     </div>
                 </div>
 
-                <div style={{ maxWidth: '1200px', margin: '0 auto', paddingTop: '32px', borderTop: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px', alignItems: 'center' }}>
-                    <p style={{ color: 'var(--text-muted)', fontSize: '13px' }}>© 2026 mülakat.com — Tüm hakları saklıdır.</p>
-                    <p style={{ color: 'var(--text-muted)', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                        <ShieldCheck size={14} color="var(--success)" /> Verileriniz %100 Anonimdir
-                    </p>
+                <div style={{ maxWidth: '1200px', margin: '0 auto', paddingTop: '32px', borderTop: '1px solid var(--border)' }}>
+                    <div style={{ padding: '24px', background: 'rgba(245, 158, 11, 0.05)', border: '1px solid rgba(245, 158, 11, 0.2)', borderRadius: '12px', marginBottom: '32px', fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+                        <strong>Yasal Uyarı:</strong> Mülakat.com bağımsız bir kariyer bilgi platformudur. Platformda yer alan maaş verileri ve mülakat deneyimleri kullanıcı katkılarına ve tahmini analizlere dayanabilir. Şirket isimleri yalnızca bilgilendirme amacıyla kullanılmaktadır ve ilgili markalarla resmi bir bağlantı bulunmamaktadır.
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px', alignItems: 'center' }}>
+                        <p style={{ color: 'var(--text-muted)', fontSize: '13px' }}>© 2026 mülakat.com — Tüm hakları saklıdır.</p>
+                        <p style={{ color: 'var(--text-muted)', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                            <ShieldCheck size={14} color="var(--success)" /> Verileriniz %100 Anonimdir
+                        </p>
+                    </div>
                 </div>
             </footer>
         </div>

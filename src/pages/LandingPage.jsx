@@ -14,7 +14,7 @@ const POPULAR_TOOLS = [
     { icon: Briefcase, title: 'Kıdem Tazminatı', desc: 'İşten ayrılma durumunda alacağın tazminatı anında hesapla.', href: '/kidem-tazminati', color: '#3b82f6', bg: 'rgba(59,130,246,0.1)', badge: null },
     { icon: ShieldCheck, title: 'İhbar Tazminatı', desc: 'İhbar sürelerine göre tazminat ve haklarını hemen öğren.', href: '/ihbar-tazminati', color: '#8b5cf6', bg: 'rgba(139,92,246,0.1)', badge: null },
     { icon: FileText, title: 'CV Oluşturucu', desc: "Profesyonel, ATS uyumlu CV'ni dakikalar içinde hazırla.", href: '/cv-hazirla', color: '#ec4899', bg: 'rgba(236,72,153,0.1)', badge: null },
-    { icon: Mic, title: 'AI Mülakat Simülatörü', desc: 'Yapay zeka asistanıyla gerçekçi mülakat deneyimi yaşa.', href: '/cv', color: '#6366f1', bg: 'rgba(99,102,241,0.1)', badge: 'En Çok Tercih Edilen' },
+    { icon: Mic, title: 'AI Mülakat Simülatörü', desc: 'Yapay zeka asistanıyla gerçekçi mülakat deneyimi yaşa.', href: '/ai-interview', color: '#6366f1', bg: 'rgba(99,102,241,0.1)', badge: 'En Çok Tercih Edilen' },
 ];
 
 const INTERVIEW_QUESTIONS = [
@@ -554,7 +554,7 @@ export default function LandingPage() {
                     <div>
                         <h4 style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '20px' }}>Kategoriler</h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                            <Link to="/interview-questions" className="footer-link">Mülakat Soruları</Link>
+                            <Link to="/genel-mulakat-sorulari" className="footer-link">Mülakat Soruları</Link>
                             <Link to="/yazilim-muhendisi-maasi" className="footer-link">Meslek Maaşları</Link>
                             <Link to="/company/google" className="footer-link">Şirket Sayfaları</Link>
                             <Link to="/cv-hazirla" className="footer-link">CV Örnekleri</Link>

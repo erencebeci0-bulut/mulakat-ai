@@ -1,105 +1,86 @@
 export const ROLES = [
-    { id: 'frontend', label: 'Frontend Developer', icon: 'Code', description: 'React, Vue, JS' },
-    { id: 'backend', label: 'Backend Developer', icon: 'Code', description: 'Node.js, Java, Python' },
-    { id: 'fullstack', label: 'Full Stack Developer', icon: 'Code', description: 'Uçtan uca geliştirme' },
-    { id: 'veri', label: 'Veri Analisti', icon: 'BarChart', description: 'Veri analizi, iş zekası' },
-    { id: 'urun', label: 'Ürün Yöneticisi', icon: 'Box', description: 'Ürün yönetimi, PM' },
-    { id: 'satis', label: 'Satış Temsilcisi', icon: 'Handshake', description: 'Satış, B2B' },
-    { id: 'cagri', label: 'Çağrı Merkezi', icon: 'Megaphone', description: 'Müşteri hizmetleri' },
-    { id: 'ik', label: 'İK Uzmanı', icon: 'Target', description: 'İşe alım, kültür' },
-    { id: 'banka', label: 'Bankacılık', icon: 'BarChart', description: 'Finans, gişe' },
-    { id: 'mezun', label: 'Yeni Mezun', icon: 'Target', description: 'Giriş seviyesi' },
-    { id: 'genel', label: 'Genel Mülakat', icon: 'Target', description: 'Genel pozisyonlar' }
+    { id: 'yazilim', label: 'Yazılım Mülakatı', icon: 'Code', description: 'Geliştirici, mühendis, tester' },
+    { id: 'satis', label: 'Satış Mülakatı', icon: 'Handshake', description: 'Satış uzmanı, B2B, hesap yöneticisi' },
+    { id: 'pazarlama', label: 'Pazarlama Mülakatı', icon: 'Megaphone', description: 'Dijital, içerik, performans pazarlama' },
+    { id: 'ik', label: 'İnsan Kaynakları', icon: 'Target', description: 'İşe alım, kültür, yetenek yönetimi' },
+    { id: 'finans', label: 'Finans Mülakatı', icon: 'BarChart', description: 'Analist, muhasebe, finans' },
+    { id: 'musteri', label: 'Müşteri Hizmetleri', icon: 'MessageSquare', description: 'Çağrı merkezi, destek' },
+    { id: 'mezun', label: 'Yeni Mezun', icon: 'Target', description: 'Giriş seviyesi, stajyer' },
+    { id: 'genel', label: 'Genel Mülakat', icon: 'Box', description: 'Tüm sektörler ve pozisyonlar' }
+];
+
+export const STATIC_SUGGESTIONS = [
+    "Cevabınızda somut bir iş/okul deneyiminizi örnek vererek detaylandırabilirsiniz.",
+    "Sonuç kısmını daha net ve ölçülebilir rakamlarla açıklayabilirsiniz.",
+    "Bireysel katkınızın yanında takım çalışması deneyiminizi de vurgulayabilirsiniz.",
+    "Kısa bir cevap oldu. Olayın bağlamını (neden bu kararı aldığınızı) eklemek iyi olabilir.",
+    "Sektörünüze özel teknik/mesleki terimleri kullanarak cevabınızı daha profesyonel hale getirebilirsiniz."
 ];
 
 export const QUESTIONS = {
-    frontend: [
-        { id: 1, type: 'intro', text: 'Frontend geliştirme dünyasına nasıl adım attınız? Kısaca bahseder misiniz?' },
+    yazilim: [
+        { id: 1, type: 'intro', text: 'Yazılım geliştirme alanına nasıl adım attınız? Kariyerinizden kısaca bahseder misiniz?' },
         { id: 2, type: 'behavioral', text: 'Takım içinde teknik bir karar konusunda anlaşmazlık yaşadığınız bir durumu ve nasıl aştığınızı anlatın.' },
-        { id: 3, type: 'role', text: 'React veya kullandığınız JS frameworkünde state yönetimini nasıl kurguluyorsunuz? Örnek verin.' },
-        { id: 4, type: 'role', text: 'Web performansını artırmak için uyguladığınız temel optimizasyon teknikleri nelerdir?' },
-        { id: 5, type: 'problem', text: 'Önemli bir lansman sabahı canlı ortamda beyaz ekran hatası (blank screen) aldınız. İlk ne yaparsınız?' },
-        { id: 6, type: 'closing', text: 'Önümüzdeki yıllarda frontend alanında hangi teknolojilere odaklanmayı planlıyorsunuz?' }
-    ],
-    backend: [
-        { id: 1, type: 'intro', text: 'Backend geliştirme konusundaki deneyiminizden ve en güçlü olduğunuz teknolojilerden bahseder misiniz?' },
-        { id: 2, type: 'behavioral', text: 'Teslim tarihi çok yakın olan ama teknik borcu yüksek bir projeyi nasıl yönettiniz?' },
-        { id: 3, type: 'role', text: 'Sistem mimarisi tasarlarken mikroservis mi yoksa monolitik mi tercih edersiniz? Neden?' },
-        { id: 4, type: 'role', text: 'Veritabanı optimizasyonu ve sorgu performansı konusunda deneyimlerinizi paylaşır mısınız?' },
-        { id: 5, type: 'problem', text: 'Servisiniz aniden 10 katı trafik almaya başladı ve yanıt süreleri uzadı. Soruna nasıl müdahale edersiniz?' },
-        { id: 6, type: 'closing', text: 'Bu pozisyonda ekibe en büyük teknik katkınızın ne olacağını düşünüyorsunuz?' }
-    ],
-    fullstack: [
-        { id: 1, type: 'intro', text: 'Hem backend hem frontend süreçlerinde çalışmak size nasıl bir avantaj sağlıyor?' },
-        { id: 2, type: 'behavioral', text: 'Baştan sona tek başınıza veya küçük bir ekiple canlıya aldığınız en zorlu projeyi anlatın.' },
-        { id: 3, type: 'role', text: 'Frontend ile backend arasındaki API iletişimini kurgularken güvenlik ve performans için nelere dikkat edersiniz?' },
-        { id: 4, type: 'role', text: 'Kimlik doğrulama (auth) süreçlerinde tercih ettiğiniz yöntemler ve nedenleri nelerdir?' },
-        { id: 5, type: 'problem', text: 'Kullanıcılar uygulamadaki bir işlemin çok yavaş olduğunu söylüyor fakat loglarda hata yok. Nereden başlarsınız?' },
-        { id: 6, type: 'closing', text: 'Kariyerinizde daha çok hangi yöne (frontend/backend/mimari) ağırlık vermek istiyorsunuz?' }
-    ],
-    veri: [
-        { id: 1, type: 'intro', text: 'Veri analizi kariyerinizi ve şu ana kadar üzerinde çalıştığınız en ilgi çekici veri projesini anlatır mısınız?' },
-        { id: 2, type: 'behavioral', text: 'Analizinizin yanlış olduğunu sonradan fark ettiğinizde nasıl davrandınız? Süreci anlatın.' },
-        { id: 3, type: 'role', text: 'Bir e-ticaret firması için dönüşüm oranını artırmak istiyorsunuz. Hangi metriklere bakarsınız ve nasıl analiz kurarsınız?' },
-        { id: 4, type: 'role', text: 'Karmaşık bir veri setini teknik olmayan yöneticilere nasıl sunarsınız?' },
-        { id: 5, type: 'problem', text: 'Bir dashboardda kritik bir metrik aniden düştü. Veri hatası mı yoksa gerçek düşüş mü olduğunu nasıl anlarsınız?' },
-        { id: 6, type: 'closing', text: 'Veri alanında önümüzdeki dönemde öne çıkacağına inandığınız teknoloji veya yaklaşım nedir?' }
-    ],
-    urun: [
-        { id: 1, type: 'intro', text: 'Kariyerinizi kısaca anlatır mısınız? Ürün yönetimine nasıl adım attınız?' },
-        { id: 2, type: 'behavioral', text: 'Geliştirme ekibi ve iş birimleri arasında kalan bir ürün kararını nasıl yönettiniz?' },
-        { id: 3, type: 'role', text: 'Ürün yol haritasını (roadmap) oluştururken özellikleri nasıl önceliklendirirsiniz?' },
-        { id: 4, type: 'role', text: 'Başarılı bir ürünü hangi KPI ve metriklerle takip edersiniz?' },
-        { id: 5, type: 'problem', text: 'Piyasaya sürdüğünüz yeni bir özelliğin hiç kullanılmadığını fark ettiniz. Sonraki adımlarınız ne olur?' },
-        { id: 6, type: 'closing', text: 'İyi bir şirket ve ürün kültürü sizce nasıl olmalı?' }
+        { id: 3, type: 'role', text: 'Temiz kod (clean code) yazmak size göre ne anlama geliyor? Hangi prensipleri benimsiyorsunuz?' },
+        { id: 4, type: 'role', text: 'Kullandığınız teknolojilerde performansı artırmak için uyguladığınız temel düzeydeki optimizasyon teknikleri nelerdir?' },
+        { id: 5, type: 'problem', text: 'Canlı ortamda kritik bir hata oluştu ve müşteriler sorun yaşıyor. İlk müdahaleniz ve adımlarınız ne olur?' },
+        { id: 6, type: 'closing', text: 'Gelecekte yazılım alanında kendinizi hangi yönde geliştirmeyi planlıyorsunuz?' }
     ],
     satis: [
-        { id: 1, type: 'intro', text: 'Satış kariyerinizi ve en çok gurur duyduğunuz satış başarınızı anlatır mısınız?' },
-        { id: 2, type: 'behavioral', text: 'Kaybetme noktasına geldiğiniz bir müşteriyi nasıl geri kazandınız?' },
-        { id: 3, type: 'role', text: 'B2B veya B2C satışta potansiyel müşteri (lead) kalitesini nasıl değerlendirirsiniz?' },
-        { id: 4, type: 'role', text: 'Fiyat itirazı yapan bir müşteriye satış kapatma sürecinde nasıl yaklaşırsınız?' },
+        { id: 1, type: 'intro', text: 'Satış alanındaki kariyerinizi ve elde ettiğiniz en gurur verici başarıyı anlatır mısınız?' },
+        { id: 2, type: 'behavioral', text: 'Kaybetme noktasına geldiğiniz zorlu bir müşteriyi nasıl geri kazandınız?' },
+        { id: 3, type: 'role', text: 'Bir satış döngüsünde potansiyel müşteri (lead) kalitesini nasıl değerlendirirsiniz?' },
+        { id: 4, type: 'role', text: 'Fiyatın çok yüksek olduğunu söyleyip itiraz eden bir müşteriye satış kapama sürecinde nasıl yaklaşırsınız?' },
         { id: 5, type: 'problem', text: 'Aylık kotanızın çok gerisindesiniz ve ayın bitmesine sadece bir hafta var. Aksiyon planınız ne olur?' },
-        { id: 6, type: 'closing', text: 'Size göre mükemmel bir satış profesyonelinin en önemli 3 yeteneği nedir?' }
+        { id: 6, type: 'closing', text: 'Size göre başarılı bir satış profesyonelinin sahip olması gereken en önemli üç yetenek nedir?' }
     ],
-    cagri: [
-        { id: 1, type: 'intro', text: 'Müşteri hizmetleri veya çağrı merkezi deneyiminizden kısaca bahseder misiniz?' },
-        { id: 2, type: 'behavioral', text: 'Çok öfkeli veya memnuniyetsiz bir müşteriyle yaptığınız en zorlu görüşmeyi nasıl yönettiniz?' },
-        { id: 3, type: 'role', text: 'Gün içinde çok sayıda tekrar eden sorunla karşılaştığınızda motivasyonunuzu nasıl korursunuz?' },
-        { id: 4, type: 'role', text: 'Aynı anda hem müşteriyi dinleyip hem de sistemde işlem yapma konusundaki pratiğiniz nasıldır?' },
-        { id: 5, type: 'problem', text: 'Sistemin çöktüğü ve işlem yapamadığınız bir anda çağrı aldığınızda nasıl iletişim kurarsınız?' },
-        { id: 6, type: 'closing', text: 'Bu rolde başarılı olmak için kendinizde gördüğünüz en güçlü özellik nedir?' }
+    pazarlama: [
+        { id: 1, type: 'intro', text: 'Pazarlama dünyasına giriş hikayenizi ve bugüne kadar yönettiğiniz en başarılı kampanyayı anlatır mısınız?' },
+        { id: 2, type: 'behavioral', text: 'Yüksek bütçeli bir kampanyanızın beklenen dönüşümü getirmediğini gördünüz. Nasıl bir aksiyon aldınız?' },
+        { id: 3, type: 'role', text: 'Bir markanın hedef kitlesini belirlerken ve konumlandırmasını yaparken hangi verileri kullanırsınız?' },
+        { id: 4, type: 'role', text: 'Dijital pazarlama kanallarının ROI (yatırım getirisi) ölçümünü nasıl hesaplar ve raporlarsınız?' },
+        { id: 5, type: 'problem', text: 'Sosyal medyada markanızla ilgili ani bir kriz/linç başladı. İletişim stratejinizi nasıl kurgularsınız?' },
+        { id: 6, type: 'closing', text: 'Pazarlama alanında önümüzdeki dönemde hangi trendlerin öne çıkacağını düşünüyorsunuz?' }
     ],
     ik: [
-        { id: 1, type: 'intro', text: 'İnsan Kaynakları alanındaki geçmişinizden ve odaklandığınız fonksiyonlardan kısaca bahseder misiniz?' },
-        { id: 2, type: 'behavioral', text: 'Uzun süre kapanmayan zor bir pozisyonu doldurmak için stratejinizi nasıl değiştirdiniz?' },
-        { id: 3, type: 'role', text: 'Aday mülakatlarında adayın kurum kültürüne uygunluğunu hangi sorularla veya yöntemlerle ölçersiniz?' },
-        { id: 4, type: 'role', text: 'Çalışan sadakatini ve bağlılığını artırmak için ne tür uygulamalar yaparsınız?' },
-        { id: 5, type: 'problem', text: 'Bir yönetici, ekibindeki bir çalışanın performansından şikayetçi ancak geri bildirim süreci işletilmemiş. Nasıl yönlendirirsiniz?' },
+        { id: 1, type: 'intro', text: 'İnsan Kaynakları alanındaki geçmişinizden ve daha çok odaklandığınız süreçlerden kısaca bahseder misiniz?' },
+        { id: 2, type: 'behavioral', text: 'Uzun süre doldurulamayan zor bir pozisyonu kapatmak için işe alım stratejinizi nasıl değiştirdiniz?' },
+        { id: 3, type: 'role', text: 'Aday mülakatlarında adayın kurum kültürüne uygunluğunu ölçmek için hangi teknikleri/soruları kullanırsınız?' },
+        { id: 4, type: 'role', text: 'Çalışan sadakatini ve bağlılığını (employee engagement) artırmak için bugüne kadar ne tür uygulamalar denediniz?' },
+        { id: 5, type: 'problem', text: 'Bir yönetici, ekibindeki çalışanın performansından şikayetçi ancak geri bildirim mekanizması işletilmemiş. Sürece nasıl dahil olursunuz?' },
         { id: 6, type: 'closing', text: 'Sizce modern bir şirkette İnsan Kaynakları departmanının en önemli misyonu nedir?' }
     ],
-    banka: [
-        { id: 1, type: 'intro', text: 'Bankacılık veya finans sektöründeki tecrübelerinizden bahseder misiniz?' },
-        { id: 2, type: 'behavioral', text: 'Müşteriye kurum politikaları gereği "hayır" demek zorunda kaldığınız bir durumu nasıl yönettiniz?' },
-        { id: 3, type: 'role', text: 'Finansal ürün satışı (kredi, sigorta vb.) yaparken müşteri ihtiyacını nasıl tespit edersiniz?' },
-        { id: 4, type: 'role', text: 'Operasyonel hata riskini en aza indirmek için günlük çalışma rutininizde nelere dikkat edersiniz?' },
-        { id: 5, type: 'problem', text: 'Gişede veya şubede müşteri kuyruğu çok uzadı ve sistem aniden yavaşladı. Bu kriz anını nasıl yönetirsiniz?' },
-        { id: 6, type: 'closing', text: 'Bankacılık sektöründeki kariyer hedefleriniz nelerdir?' }
+    finans: [
+        { id: 1, type: 'intro', text: 'Finans alanındaki tecrübelerinizden ve bugüne kadar üstlendiğiniz temel sorumluluklardan bahseder misiniz?' },
+        { id: 2, type: 'behavioral', text: 'Önemli bir finansal raporda hata yaptığınızı sonradan fark ettiğiniz bir durumu ve süreci nasıl yönettiğinizi anlatın.' },
+        { id: 3, type: 'role', text: 'Bir şirketin finansal sağlığını değerlendirirken en çok hangi oranlara (rasyolara) ve tablolara odaklanırsınız?' },
+        { id: 4, type: 'role', text: 'Bütçeleme ve finansal tahminleme (forecasting) yaparken kullandığınız sistemler/yaklaşımlar nelerdir?' },
+        { id: 5, type: 'problem', text: 'Şirketin nakit akışında beklenmedik bir daralma öngördünüz. Yönetime sunacağınız ilk 3 önlem ne olurdu?' },
+        { id: 6, type: 'closing', text: 'Finans sektöründeki değişen teknoloji (ör: yapay zeka) sizce bu rolü önümüzdeki 5 yılda nasıl etkileyecek?' }
+    ],
+    musteri: [
+        { id: 1, type: 'intro', text: 'Müşteri hizmetleri deneyiminizden ve insanlarla iletişim kurma konusundaki yaklaşımınızdan kısaca bahseder misiniz?' },
+        { id: 2, type: 'behavioral', text: 'Çok öfkeli veya mağduriyet yaşamış bir müşteriyle yaptığınız en zorlu görüşmeyi nasıl çözüme kavuşturduğunuzu anlatın.' },
+        { id: 3, type: 'role', text: 'Gün içinde art arda gergin müşterilerle görüşmenize rağmen motivasyonunuzu ve enerjinizi nasıl korursunuz?' },
+        { id: 4, type: 'role', text: 'Müşteriye kurum politikaları gereği "haklısınız ama işlemi yapamıyorum" demek zorunda kaldığınız bir durumu nasıl yönetirsiniz?' },
+        { id: 5, type: 'problem', text: 'Kullandığınız sistem çöktü, işlemi yapamıyorsunuz ama telefonda bekleyen bir müşteri var. İletişimi o sırada nasıl sürdürürsünüz?' },
+        { id: 6, type: 'closing', text: 'Bu rolde başarılı olmak ve müşteri memnuniyeti yaratmak için kendinizde gördüğünüz en güçlü özellik nedir?' }
     ],
     mezun: [
-        { id: 1, type: 'intro', text: 'Eğitim hayatınızı ve varsa staj/proje deneyimlerinizi kısaca anlatır mısınız?' },
-        { id: 2, type: 'behavioral', text: 'Üniversitede grup projelerinde karşılaştığınız bir zorluğu ve sorumluluğu nasıl aldığınızı anlatın.' },
-        { id: 3, type: 'role', text: 'Pratik iş deneyiminizin az olmasını hangi kişisel veya teknik yetkinliklerinizle telafi ediyorsunuz?' },
-        { id: 4, type: 'role', text: 'Öğrenmeye en açık olduğunuz alan nedir? Kendinizi geliştirmek için son 6 ayda neler yaptınız?' },
-        { id: 5, type: 'problem', text: 'Size verilen bir görevi nasıl yapacağınızı hiç bilmiyorsunuz. İlk olarak kimden veya nereden yardım alırsınız?' },
-        { id: 6, type: 'closing', text: 'İlk iş deneyiminizden ve şirketinizden temel beklentileriniz nelerdir?' }
+        { id: 1, type: 'intro', text: 'Eğitim hayatınızı ve varsa kulüp, staj, proje veya gönüllülük deneyimlerinizi kısaca anlatır mısınız?' },
+        { id: 2, type: 'behavioral', text: 'Üniversitede grup projelerinde karşılaştığınız bir zorluğu ve o zorluk karşısında nasıl sorumluluk aldığınızı anlatın.' },
+        { id: 3, type: 'role', text: 'Pratik iş / sektör deneyiminizin az olmasını hangi kişisel veya teknik yetkinliklerinizle telafi edebileceğinize inanıyorsunuz?' },
+        { id: 4, type: 'role', text: 'Öğrenmeye en açık olduğunuz alan nedir? Kendinizi geliştirmek için son 1 yılda proaktif olarak neler yaptınız?' },
+        { id: 5, type: 'problem', text: 'Size verilen bir görevi iş hayatında nasıl yapacağınızı hiç bilmiyorsunuz. İlk olarak nasıl bir aksiyon alırsınız?' },
+        { id: 6, type: 'closing', text: 'İlk profesyonel iş deneyiminizden ve katılacağınız şirketten temel beklentileriniz nelerdir?' }
     ],
     genel: [
-        { id: 1, type: 'intro', text: 'Kendinizi kısaca tanıtın. Bu pozisyona başvurmanızın temel sebebi nedir?' },
-        { id: 2, type: 'behavioral', text: 'Kariyerinizde aldığınız en zor kararlardan birini anlatın. Bu kararı nasıl verdiniz?' },
-        { id: 3, type: 'role', text: 'En güçlü mesleki yönünüzü ve bunu kanıtlayan somut bir örneği anlatın.' },
-        { id: 4, type: 'role', text: 'En büyük mesleki zayıflığınız nedir ve bu konuda ne yapıyorsunuz?' },
-        { id: 5, type: 'problem', text: 'Çok az bilgiyle hızlı karar vermeniz gereken bir durumu anlatın. Nasıl ilerledi?' },
-        { id: 6, type: 'closing', text: '5 yıl sonra kendinizi nerede görüyorsunuz? Bu pozisyon bu hedefe nasıl katkı sağlar?' }
+        { id: 1, type: 'intro', text: 'Kendinizi kısaca tanıtın. Sizi bu pozisyona ve sektörümüzde çalışmaya başvurmaya iten temel sebep nedir?' },
+        { id: 2, type: 'behavioral', text: 'Kariyeriniz veya eğitim hayatınızda aldığınız en zor kararlardan birini anlatın. Bu kararı alırken nasıl bir süreç izlediniz?' },
+        { id: 3, type: 'role', text: 'En güçlü mesleki (veya kişisel) yetkinliğinizi ve bunu kanıtlayan somut bir deneyiminizi bizimle paylaşır mısınız?' },
+        { id: 4, type: 'role', text: 'Öz eleştiri yaptığınızda en büyük gelişim alanınızın ne olduğunu düşünüyorsunuz ve bu konuda ne yapıyorsunuz?' },
+        { id: 5, type: 'problem', text: 'Elinizde çok az bilgi var ancak hızlı bir karar vermeniz gereken kritik bir durumun içindesiniz. Süreç nasıl işlerdi?' },
+        { id: 6, type: 'closing', text: '5 yıl sonra kendinizi nerede, nasıl bir rol üstlenmiş olarak görüyorsunuz? Bu pozisyon bu büyük resme nasıl katkı sağlar?' }
     ]
 };
 

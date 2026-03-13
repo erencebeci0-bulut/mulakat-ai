@@ -6,68 +6,71 @@ import SEOHead from '../components/SEOHead';
 import { InterviewIllustration } from '../components/ImagePlaceholders';
 
 const ROLE_DATA = {
-    'yazilimci': {
-        title: 'Yazılım Uzmanı Mülakat Soruları',
+    'yazilim': {
+        title: 'Yazılım Mülakat Soruları',
         desc: 'Yazılım uzmanı pozisyonları için teknik ve davranışsal en kritik mülakat soruları.',
         salary: '₺45.000 - ₺120.000',
         questions: [
             { text: 'Bize karşılaştığın en zor teknik problemi ve nasıl çözdüğünü anlatır mısın?', focus: 'Problem Çözme', tip: 'STAR metodunu kullanarak spesifik bir hata veya mimari sorunu anlat.' },
-            { text: 'REST API mimarisi tasarlarken nelere dikkat edersin?', focus: 'Teknik Bilgi', tip: 'Güvenlik, ölçeklenebilirlik, isimlendirme standartları ve HTTP metodlarından bahset.' },
-            { text: 'Microservices ile Monolithic mimari arasındaki temel farklar nelerdir?', focus: 'Sistem Tasarımı', tip: 'Hangi durumda hangisini tercih edeceğini örneklerle açıkla.' },
-            { text: 'Projenin deadline\'ına yetişemeyeceğini anladığında ne yaparsın?', focus: 'Kriz Yönetimi', tip: 'İletişim becerilerine ve önceliklendirme stratejilerine odaklan.' },
-            { text: 'Bir veritabanı sorgusunu optimize etmek için hangi adımları izlersin?', focus: 'Performans Optimizasyonu', tip: 'Index kullanımı, execution plan analizi ve n+1 probleminden bahset.' },
+            { text: 'Temiz kod (clean code) yazmak size göre ne anlama geliyor?', focus: 'Teknik Bilgi', tip: 'İsimlendirme standartları, SOLID prensipleri ve sadelikten bahset.' },
+            { text: 'Canlı ortamda kritik bir hata oluştu. İlk müdahaleniz ne olur?', focus: 'Kriz Yönetimi', tip: 'Hızlı çözüm ile kalıcı çözüm ayrımını vurgulayarak süreci anlat.' },
         ]
     },
-    'ik': {
-        title: 'İnsan Kaynakları (İK) Mülakat Soruları',
-        desc: 'İK uzmanı ve yönetici pozisyonları için en yaygın mülakat soruları.',
-        salary: '₺30.000 - ₺75.000',
-        questions: [
-            { text: 'Zor bir çalışanı veya yöneticiyi nasıl idare edersin?', focus: 'Çatışma Yönetimi', tip: 'Empati ve profesyonel sınırlar çerçevesinde bir örnek ver.' },
-            { text: 'İşe alım sürecinde yanlış karar verdiğin bir anı anlat.', focus: 'Öz Farkındalık', tip: 'Hatayı nasıl fark ettiğini ve süreci nasıl düzelttiğini vurgula.' },
-            { text: 'Şirket kültürünü iyileştirmek için daha önce ne gibi çalışmalar yaptın?', focus: 'Organizasyonel Gelişim', tip: 'Veri ve çalışan geri bildirimlerine dayalı aksiyonlarını anlat.' },
-        ]
-    },
-    'satis-temsilcisi': {
+    'satis': {
         title: 'Satış Temsilcisi Mülakat Soruları',
         desc: 'Satış hunisi yönetimi, ikna kabiliyeti ve itiraz karşılama konularında sorular.',
         salary: '₺25.000 - ₺80.000 + Prim',
         questions: [
-            { text: 'Bana bu kalemi / ürünü satar mısın?', focus: 'İkna ve İhtiyaç Analizi', tip: 'Özellikle müşterinin ihtiyacını anlamaya yönelik sorular sorarak başla.' },
-            { text: 'Bir müşteriden "Şu an bütçemiz yok" itirazını aldığında nasıl yaklaşırsın?', focus: 'İtiraz Yönetimi', tip: 'Değer önermesini nasıl vurguladığını ve itirazı nasıl fırsata çevirdiğini anlat.' },
-            { text: 'Satış hedefini tutturamadığın bir dönemi nasıl yönettin?', focus: 'Dayanıklılık', tip: 'Durumu nasıl analiz ettiğini ve stratejini nasıl değiştirdiğini belirterek cevapla.' },
+            { text: 'Kaybetme noktasına geldiğiniz zorlu bir müşteriyi nasıl geri kazandınız?', focus: 'İkna ve Problem Çözme', tip: 'Müşterinin asıl ihtiyacını nasıl tespit ettiğini anlat.' },
+            { text: 'Fiyatın çok yüksek olduğunu söyleyen bir müşteriye nasıl yaklaşırsın?', focus: 'İtiraz Yönetimi', tip: 'Değer önermesini nasıl vurguladığını ve itirazı fırsata çevirdiğini belirt.' },
         ]
     },
-    'banka': {
-        title: 'Banka Gişe Görevlisi Mülakat Soruları',
-        desc: 'Müşteri iletişimi ve dikkat gerektiren banka operasyonları için sorular.',
-        salary: '₺28.000 - ₺45.000',
+    'pazarlama': {
+        title: 'Pazarlama Mülakat Soruları',
+        desc: 'Dijital pazarlama, kampanya yönetimi ve veri analizi soruları.',
+        salary: '₺30.000 - ₺90.000',
         questions: [
-            { text: 'Öfkeli bir müşteriyle nasıl başa çıkarsın?', focus: 'Kriz İletişimi', tip: 'Sakin kalma ve çözüm odaklı yaklaşım sergilediğini hissettir.' },
-            { text: 'Neden bankacılık sektöründe kariyer yapmak istiyorsun?', focus: 'Motivasyon', tip: 'Finans sektörüne olan ilgini ve insan ilişkilerindeki gücünü ilişkilendir.' },
-            { text: 'Yoğun stres altında dikkatini nasıl toplarsın?', focus: 'Stres Yönetimi', tip: 'Rutinlerini ve hata yapmamak için kullandığın kişisel yöntemlerini anlat.' },
+            { text: 'Bugüne kadar yönettiğin en başarılı kampanya hangisiydi?', focus: 'Performans Yönetimi', tip: 'Kampanyanın ROI metriğini ve kullandığın kanalları anlat.' },
+            { text: 'Sosyal medyada ani bir kriz başladı. İletişim stratejin nedir?', focus: 'Kriz Yönetimi', tip: 'Şeffaflık, hız ve marka dili uyumuna değin.' },
         ]
     },
-    'cagri-merkezi': {
-        title: 'Çağrı Merkezi Mülakat Soruları',
-        desc: 'Müşteri hizmetleri ve iletişim becerilerini ölçen çağrı merkezi soruları.',
+    'ik': {
+        title: 'İnsan Kaynakları Mülakat Soruları',
+        desc: 'İK uzmanı ve yönetici pozisyonları için en yaygın mülakat soruları.',
+        salary: '₺30.000 - ₺75.000',
+        questions: [
+            { text: 'Uzun süre doldurulamayan zor bir pozisyonu nasıl kapatırsınız?', focus: 'Stratejik İşe Alım', tip: 'Alternatif kaynakları ve aktif aday avı stratejilerini anlat.' },
+            { text: 'Çalışan sadakatini artırmak için ne tür uygulamalar denediniz?', focus: 'Çalışan Bağlılığı', tip: 'Veri ve çalışan geri bildirimlerine dayalı aksiyonlarını anlat.' },
+        ]
+    },
+    'finans': {
+        title: 'Finans Mülakat Soruları',
+        desc: 'Bütçeleme, analiz ve finansal raporlama pozisyonları için sorular.',
+        salary: '₺ ৩৫.000 - ₺100.000',
+        questions: [
+            { text: 'Şirketin finansal sağlığını değerlendirirken en çok hangi rasyolara odaklanırsın?', focus: 'Finansal Analiz', tip: 'Sektöre göre değişebilecek karlılık ve likidite oranlarından bahset.' },
+            { text: 'Bütçeleme yaparken kullandığınız sistemler nelerdir?', focus: 'Planlama', tip: 'Geleceğe dönük (forecasting) yeteneklerini öne çıkar.' },
+        ]
+    },
+    'musteri': {
+        title: 'Müşteri Hizmetleri Mülakat Soruları',
+        desc: 'Müşteri ilişkileri ve kriz yönetimi iletişim becerilerini ölçen sorular.',
         salary: '₺21.000 - ₺35.000',
         questions: [
-            { text: 'Telefonda çözülemeyen bir sorunu nasıl tırmandırırsın?', focus: 'Süreç Yönetimi', tip: 'Şirket prosedürlerine bağlılığını ve müşteri beklentisini yönetme şeklini anlat.' },
-            { text: 'Sürekli tekrar eden çağrılarda motivasyonunu nasıl korursun?', focus: 'Dayanıklılık', tip: 'Kişisel hedeflerine ve işin müşteriye sağladığı değere odaklandığını belirt.' },
+            { text: 'Çok öfkeli veya mağduriyet yaşamış bir müşteriyle nasıl görüşürsünüz?', focus: 'Kriz İletişimi', tip: 'Sakin kalma ve çözüm odaklı empati sergilediğini hissettir.' },
+            { text: 'Kurum politikaları gereği "hayır" demek zorunda kaldığınız durumu nasıl yönetirsiniz?', focus: 'İletişim Sınırları', tip: 'Şirket kurallarını korurken müşteriye alternatifler sunduğunu belirt.' },
         ]
     },
-    'staj': {
-        title: 'Stajyer Mülakat Soruları',
-        desc: 'Okul projeleri, öğrenme isteği ve takım çalışmasına odaklı stajyer soruları.',
-        salary: '₺5.000 - ₺17.000',
+    'mezun': {
+        title: 'Yeni Mezun Mülakat Soruları',
+        desc: 'Okul projeleri, öğrenme isteği ve takım çalışmasına odaklı sorular.',
+        salary: '₺20.000 - ₺35.000',
         questions: [
-            { text: 'Üniversitede içinde bulunduğun bir grup projesinde karşılaştığınız en büyük zorluk neydi?', focus: 'Takım Çalışması', tip: 'Sorumluluk alma ve iletişim becerilerini ön plana çıkar.' },
-            { text: 'Bu staj programından beklentilerin neler?', focus: 'Öğrenme İsteği', tip: 'Neler öğrenmek istediğini ve şirkete nasıl katkı sağlayabileceğini net ifade et.' },
-            { text: 'Bilmediğin bir konuyla veya teknolojiyle karşılaştığında nasıl öğrenirsin?', focus: 'Araştırma Becerisi', tip: 'Kullandığın kaynakları ve kendi kendine öğrenme prensiplerini anlat.' },
+            { text: 'Üniversitede grup projelerinde karşılaştığınız en büyük zorluk neydi?', focus: 'Takım Çalışması', tip: 'Sorumluluk alma ve iletişim becerilerini ön plana çıkar.' },
+            { text: 'İlk iş deneyiminizden ve şirketinizden temel beklentileriniz nelerdir?', focus: 'Öğrenme İsteği', tip: 'Kişisel gelişimin ve şirkete değer katma isteğinin altını çiz.' },
         ]
     },
-    'default': {
+    'genel': {
         title: 'Genel Mülakat Soruları',
         desc: 'Her pozisyon için karşına çıkabilecek en kritik sorular ve cevaplama ipuçları.',
         salary: 'Pozisyona Göre Değişir',
@@ -80,10 +83,18 @@ const ROLE_DATA = {
 };
 
 export default function SeoPage() {
-    const { role } = useParams();
+    const { roleSlug } = useParams();
     const navigate = useNavigate();
 
-    const data = ROLE_DATA[role] || ROLE_DATA.default;
+    // Parse role from /yazilim-mulakat-sorulari shape if present, otherwise fallback to general
+    let role = 'genel';
+    if (roleSlug && roleSlug.endsWith('-mulakat-sorulari')) {
+        role = roleSlug.replace('-mulakat-sorulari', '');
+    } else if (roleSlug && ROLE_DATA[roleSlug]) {
+        role = roleSlug;
+    }
+
+    const data = ROLE_DATA[role] || ROLE_DATA.genel;
 
     return (
         <div style={{ minHeight: '100vh', backgroundColor: 'var(--bg-primary)', paddingBottom: '100px' }}>

@@ -4,10 +4,6 @@ import { useState } from 'react';
 
 // Pages
 const LandingPage = lazy(() => import('./pages/LandingPage'));
-const CVUploadPage = lazy(() => import('./pages/CVUploadPage'));
-const RoleSelectionPage = lazy(() => import('./pages/RoleSelectionPage'));
-const InterviewPage = lazy(() => import('./pages/InterviewPage'));
-const ResultsPage = lazy(() => import('./pages/ResultsPage'));
 const MaasHesaplamaPage = lazy(() => import('./pages/MaasHesaplamaPage'));
 const IstifaPage = lazy(() => import('./pages/IstifaPage'));
 const CvBuilderPage = lazy(() => import('./pages/CvBuilderPage'));
@@ -49,11 +45,11 @@ export default function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
 
-          {/* Interview flow */}
-          <Route path="/cv" element={<CVUploadPage sessionData={sessionData} updateSession={updateSession} />} />
-          <Route path="/rol" element={<RoleSelectionPage sessionData={sessionData} updateSession={updateSession} />} />
-          <Route path="/mulakat" element={<InterviewPage sessionData={sessionData} updateSession={updateSession} />} />
-          <Route path="/sonuc" element={<ResultsPage sessionData={sessionData} updateSession={updateSession} resetSession={resetSession} />} />
+          {/* Deprecated Legacy Interview flow -> Redirect to unified simulator */}
+          <Route path="/cv" element={<Navigate to="/ai-interview" replace />} />
+          <Route path="/rol" element={<Navigate to="/ai-interview" replace />} />
+          <Route path="/mulakat" element={<Navigate to="/ai-interview" replace />} />
+          <Route path="/sonuc" element={<Navigate to="/ai-interview" replace />} />
 
           {/* Tools */}
           <Route path="/maas-hesaplama" element={<MaasHesaplamaPage />} />
@@ -77,9 +73,13 @@ export default function App() {
           {/* Community */}
           <Route path="/liderlik-tablosu" element={<LeaderboardPage />} />
 
-          {/* Programmatic SEO */}
+          {/* Programmatic SEO - Top Level Keywords */}
+          {['yazilim', 'satis', 'pazarlama', 'ik', 'finans', 'musteri', 'mezun', 'genel'].map(role => (
+            <Route key={role} path={`/${role}-mulakat-sorulari`} element={<SeoPage />} />
+          ))}
+          {/* Legacy & Category Index */}
           <Route path="/mulakat-sorulari" element={<SeoPage />} />
-          <Route path="/mulakat-sorulari/:role" element={<SeoPage />} />
+          <Route path="/mulakat-sorulari/:roleSlug" element={<SeoPage />} />
 
           <Route path="/kvkk" element={<GenericLegalPage title="KVKK ve Aydınlatma Metni" contentBlocks={[{ text: 'Türkiye Cumhuriyeti Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında verileriniz güvendedir.' }, { subtitle: 'İşlenen Veriler', text: 'CV ve mülakat kayıtlarınız anonimleştirilir.' }]} />} />
           <Route path="/cerez-politikasi" element={<GenericLegalPage title="Çerez Politikası" contentBlocks={[{ text: 'Platformumuzda temel oturum yönetimi ve anonim analiz için gerekli çerezler kullanılmaktadır.' }]} />} />

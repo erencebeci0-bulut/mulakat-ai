@@ -3,7 +3,7 @@
 This document defines the expected JSON payloads that Mülakat.com will send to our n8n automation webhooks. These structures are designed to be easily parsed and routed by n8n workflows for appending data to Notion, Google Sheets, or internal databases.
 
 ## 1. Salary Contribution Payload
-**Endpoint:** `POST https://n8n.mulakat.com/webhook/salary-submission`
+**Endpoint:** `POST https://n8n.mulakatim.com/webhook/salary-submission`
 
 ```json
 {
@@ -28,7 +28,7 @@ This document defines the expected JSON payloads that Mülakat.com will send to 
 ```
 
 ## 2. Interview Experience & Question Payload
-**Endpoint:** `POST https://n8n.mulakat.com/webhook/interview-submission`
+**Endpoint:** `POST https://n8n.mulakatim.com/webhook/interview-submission`
 
 ```json
 {
@@ -60,7 +60,7 @@ This document defines the expected JSON payloads that Mülakat.com will send to 
 ```
 
 ## 3. General User Feedback / Bug Report
-**Endpoint:** `POST https://n8n.mulakat.com/webhook/user-feedback`
+**Endpoint:** `POST https://n8n.mulakatim.com/webhook/user-feedback`
 
 ```json
 {

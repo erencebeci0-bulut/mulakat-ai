@@ -1,0 +1,1542 @@
+[
+  {
+    "keyword": "yazılım mühendisi maaşı",
+    "category": "maaslar",
+    "url_slug": "/maas/yazilim-muhendisi",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "veri analisti maaşı",
+    "category": "maaslar",
+    "url_slug": "/maas/veri-analisti",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "ürün yöneticisi maaşı",
+    "category": "maaslar",
+    "url_slug": "/maas/urun-yoneticisi",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "insan kaynakları uzmanı maaşı",
+    "category": "maaslar",
+    "url_slug": "/maas/insan-kaynaklari-uzmani",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "doktor maaşları",
+    "category": "maaslar",
+    "url_slug": "/maas/doktor",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "hemşire maaşları",
+    "category": "maaslar",
+    "url_slug": "/maas/hemsire",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "avukat maaşları",
+    "category": "maaslar",
+    "url_slug": "/maas/avukat",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "polis maaşı",
+    "category": "maaslar",
+    "url_slug": "/maas/polis",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "öğretmen maaşları",
+    "category": "maaslar",
+    "url_slug": "/maas/ogretmen",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "pilot maaşları",
+    "category": "maaslar",
+    "url_slug": "/maas/pilot",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "astsubay maaşları",
+    "category": "maaslar",
+    "url_slug": "/maas/astsubay",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "bekçi maaşları",
+    "category": "maaslar",
+    "url_slug": "/maas/bekci",
+    "search_intent": "transactional/data",
+    "page_type": "salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "trendyol yazılımcı maaşı",
+    "category": "maaslar",
+    "url_slug": "/sirket/trendyol-yazilimci-maasi",
+    "search_intent": "transactional/data",
+    "page_type": "company_salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "getir kurye maaşı",
+    "category": "maaslar",
+    "url_slug": "/sirket/getir-kurye-maasi",
+    "search_intent": "transactional/data",
+    "page_type": "company_salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "thy kabin memuru maaşı",
+    "category": "maaslar",
+    "url_slug": "/sirket/thy-kabin-memuru-maasi",
+    "search_intent": "transactional/data",
+    "page_type": "company_salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "bim kasiyer maaşı",
+    "category": "maaslar",
+    "url_slug": "/sirket/bim-kasiyer-maasi",
+    "search_intent": "transactional/data",
+    "page_type": "company_salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "garanti bankası gişe memuru maaşı",
+    "category": "maaslar",
+    "url_slug": "/sirket/garanti-bankasi-gise-memuru-maasi",
+    "search_intent": "transactional/data",
+    "page_type": "company_salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "aselsan mühendis maaşları",
+    "category": "maaslar",
+    "url_slug": "/sirket/aselsan-muhendis-maasi",
+    "search_intent": "transactional/data",
+    "page_type": "company_salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "amazon data analyst maaşı",
+    "category": "maaslar",
+    "url_slug": "/sirket/amazon-data-analyst-maasi",
+    "search_intent": "transactional/data",
+    "page_type": "company_salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "lc waikiki mağaza müdürü maaşı",
+    "category": "maaslar",
+    "url_slug": "/sirket/lc-waikiki-magaza-muduru-maasi",
+    "search_intent": "transactional/data",
+    "page_type": "company_salary_page",
+    "required_data_nodes": [
+      "ortalama_maas",
+      "maas_araligi",
+      "deneyim_yili_tablosu",
+      "yan_haklar"
+    ]
+  },
+  {
+    "keyword": "yazılım mühendisi",
+    "category": "meslekler",
+    "url_slug": "/meslek/yazilim-muhendisi",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "veri analisti",
+    "category": "meslekler",
+    "url_slug": "/meslek/veri-analisti",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "insan kaynakları uzmanı",
+    "category": "meslekler",
+    "url_slug": "/meslek/insan-kaynaklari-uzmani",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "ürün yöneticisi",
+    "category": "meslekler",
+    "url_slug": "/meslek/urun-yoneticisi",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "dijital pazarlama uzmanı",
+    "category": "meslekler",
+    "url_slug": "/meslek/dijital-pazarlama-uzmani",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "siber güvenlik uzmanı",
+    "category": "meslekler",
+    "url_slug": "/meslek/siber-guvenlik-uzmani",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "iş analisti",
+    "category": "meslekler",
+    "url_slug": "/meslek/is-analisti",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "proje yöneticisi",
+    "category": "meslekler",
+    "url_slug": "/meslek/proje-yoneticisi",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "grafik tasarımcı",
+    "category": "meslekler",
+    "url_slug": "/meslek/grafik-tasarimci",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "ui ux tasarımcı",
+    "category": "meslekler",
+    "url_slug": "/meslek/ui-ux-tasarimci",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "seo uzmanı",
+    "category": "meslekler",
+    "url_slug": "/meslek/seo-uzmani",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "sosyal medya uzmanı",
+    "category": "meslekler",
+    "url_slug": "/meslek/sosyal-medya-uzmani",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "satış temsilcisi",
+    "category": "meslekler",
+    "url_slug": "/meslek/satis-temsilcisi",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "makine mühendisi",
+    "category": "meslekler",
+    "url_slug": "/meslek/makine-muhendisi",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "elektrik elektronik mühendisi",
+    "category": "meslekler",
+    "url_slug": "/meslek/elektrik-elektronik-muhendisi",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "endüstri mühendisi",
+    "category": "meslekler",
+    "url_slug": "/meslek/endustri-muhendisi",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "inşaat mühendisi",
+    "category": "meslekler",
+    "url_slug": "/meslek/insaat-muhendisi",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "muhasebe uzmanı",
+    "category": "meslekler",
+    "url_slug": "/meslek/muhasebe-uzmani",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "finansal analist",
+    "category": "meslekler",
+    "url_slug": "/meslek/finansal-analist",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "avukat",
+    "category": "meslekler",
+    "url_slug": "/meslek/avukat",
+    "search_intent": "informational/data",
+    "page_type": "profession_page",
+    "required_data_nodes": [
+      "gorev_tanimi",
+      "gerekli_yetenekler",
+      "kariyer_yolu",
+      "maas_ozeti"
+    ]
+  },
+  {
+    "keyword": "frontend developer mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/frontend-developer-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "backend developer mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/backend-developer-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "satış temsilcisi mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/satis-temsilcisi-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "insan kaynakları uzmanı mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/insan-kaynaklari-uzmani-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "yeni mezun mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/yeni-mezun-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "çağrı merkezi mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/cagri-merkezi-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "banka gişe yetkilisi mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/banka-gise-yetkilisi-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "kabin memuru mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/kabin-memuru-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "proje yöneticisi mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/proje-yoneticisi-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "veri bilimci mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/veri-bilimci-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "ürün yöneticisi mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/urun-yoneticisi-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "iş analisti mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/is-analisti-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "yazılım mühendisi mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/yazilim-muhendisi-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "dijital pazarlama uzmanı mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/dijital-pazarlama-uzmani-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "müşteri temsilcisi mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/musteri-temsilcisi-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "muhasebe uzmanı mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/muhasebe-uzmani-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "finansal analist mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/finansal-analist-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "qa tester mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/qa-tester-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "devops mühendisi mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/devops-muhendisi-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "stajyer mülakat soruları",
+    "category": "mulakat-sorulari",
+    "url_slug": "/mulakat/stajyer-mulakat-sorulari",
+    "search_intent": "informational/practice",
+    "page_type": "interview_category_page",
+    "required_data_nodes": [
+      "teknik_sorular",
+      "davranissal_sorular",
+      "cevap_ipuclari",
+      "ai_simulator_module"
+    ]
+  },
+  {
+    "keyword": "trendyol",
+    "category": "sirketler",
+    "url_slug": "/sirket/trendyol",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "amazon türkiye",
+    "category": "sirketler",
+    "url_slug": "/sirket/amazon-turkiye",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "garanti bbva",
+    "category": "sirketler",
+    "url_slug": "/sirket/garanti-bbva",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "aselsan",
+    "category": "sirketler",
+    "url_slug": "/sirket/aselsan",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "thy",
+    "category": "sirketler",
+    "url_slug": "/sirket/thy",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "getir",
+    "category": "sirketler",
+    "url_slug": "/sirket/getir",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "koç holding",
+    "category": "sirketler",
+    "url_slug": "/sirket/koc-holding",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "sabancı holding",
+    "category": "sirketler",
+    "url_slug": "/sirket/sabanci-holding",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "iş bankası",
+    "category": "sirketler",
+    "url_slug": "/sirket/is-bankasi",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "akbank",
+    "category": "sirketler",
+    "url_slug": "/sirket/akbank",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "yapı kredi",
+    "category": "sirketler",
+    "url_slug": "/sirket/yapi-kredi",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "turkcell",
+    "category": "sirketler",
+    "url_slug": "/sirket/turkcell",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "türk telekom",
+    "category": "sirketler",
+    "url_slug": "/sirket/turk-telekom",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "vodafone türkiye",
+    "category": "sirketler",
+    "url_slug": "/sirket/vodafone-turkiye",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "ford otosan",
+    "category": "sirketler",
+    "url_slug": "/sirket/ford-otosan",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "arçelik",
+    "category": "sirketler",
+    "url_slug": "/sirket/arcelik",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "şişecam",
+    "category": "sirketler",
+    "url_slug": "/sirket/sisecam",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "lc waikiki",
+    "category": "sirketler",
+    "url_slug": "/sirket/lc-waikiki",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "bim",
+    "category": "sirketler",
+    "url_slug": "/sirket/bim",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "migros",
+    "category": "sirketler",
+    "url_slug": "/sirket/migros",
+    "search_intent": "hub/navigation",
+    "page_type": "company_page",
+    "required_data_nodes": [
+      "sektor",
+      "calisan_sayisi",
+      "ise_alim_sureci",
+      "yorum_ozetleri"
+    ]
+  },
+  {
+    "keyword": "asgari ücret",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/asgari-ucret",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "kıdem tazminatı",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/kidem-tazminati",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "ihbar tazminatı",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/ihbar-tazminati",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "işsizlik maaşı",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/issizlik-maasi",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "yıllık izin süresi",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/yillik-izin-suresi",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "mazeret izni",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/mazeret-izni",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "doğum izni",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/dogum-izni",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "babalık izni",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/babalik-izni",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "ölüm izni",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/olum-izni",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "deneme süresi",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/deneme-suresi",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "haftalık çalışma saati",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/haftalik-calisma-saati",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "fazla mesai",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/fazla-mesai",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "hafta tatili",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/hafta-tatili",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "resmi tatil çalışması",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/resmi-tatil-calismasi",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "agi durumu",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/agi-durumu",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "mobbing",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/mobbing",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "ücretsiz izin",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/ucretsiz-izin",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "iş kazası",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/is-kazasi",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "rapor parası",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/rapor-parasi",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "istifa tazminatı",
+    "category": "is-hayati",
+    "url_slug": "/is-hayati/istifa-tazminati",
+    "search_intent": "informational/data",
+    "page_type": "worklife_page",
+    "required_data_nodes": [
+      "kanun_maddesi",
+      "guncel_degerler",
+      "ornek_hesaplama",
+      "sikca_sorulan_sorular"
+    ]
+  },
+  {
+    "keyword": "net maaş hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/net-maas-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "kıdem tazminatı hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/kidem-tazminati-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "fazla mesai hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/fazla-mesai-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "yıllık izin hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/yillik-izin-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "ihbar tazminatı hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/ihbar-tazminati-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "işsizlik maaşı hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/issizlik-maasi-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "agi hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/agi-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "asgari ücret hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/asgari-ucret-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "emekli maaşı hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/emekli-maasi-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "vergi dilimi hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/vergi-dilimi-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "gelir vergisi hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/gelir-vergisi-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "bes kesintisi hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/bes-kesintisi-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "sgk primi hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/sgk-primi-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "damga vergisi hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/damga-vergisi-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "işverene maliyet hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/isverene-maliyet-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "netten brüte maaş hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/netten-brute-maas-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "brütten nete maaş hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/brutten-nete-maas-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "günlük yevmiye hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/gunluk-yevmiye-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "part time maaş hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/part-time-maas-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  },
+  {
+    "keyword": "işgöremezlik ödeneği hesaplama",
+    "category": "hesaplama-araclari",
+    "url_slug": "/hesaplama/isgoremezlik-odenegi-hesaplama",
+    "search_intent": "tool",
+    "page_type": "calculator_page",
+    "required_data_nodes": [
+      "hesaplama_formulu",
+      "form_input_fields",
+      "yasal_oranlar"
+    ]
+  }
+]

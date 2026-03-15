@@ -4,6 +4,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import SEOHead from '../components/SEOHead';
 import { ROLES } from '../data/roles';
 import { SalaryChartIllustration } from '../components/ImagePlaceholders';
+import PracticeCta from '../components/PracticeCta';
 import { Wallet, Briefcase, Mic, FileText, CheckCircle, Search, Star, MessageSquare, TrendingUp, AlertTriangle } from 'lucide-react';
 
 export default function JobRoleSeoPage() {
@@ -150,21 +151,11 @@ export default function JobRoleSeoPage() {
                 {/* Right Column: CTA Tools */}
                 <aside style={{ display: 'flex', flexDirection: 'column', gap: '24px', position: 'sticky', top: '24px' }}>
 
-                    {/* Tool 1 */}
-                    <section className="card glass-card hover-lift" style={{ padding: '24px', border: '1px solid rgba(139,92,246,0.3)', background: 'linear-gradient(135deg, rgba(139,92,246,0.05), transparent)' }}>
-                        <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(139,92,246,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                            <Mic size={24} color="#8b5cf6" />
-                        </div>
-                        <h3 style={{ fontSize: '18px', fontWeight: 800, marginBottom: '12px' }}>
-                            {roleData.title} Simülasyonu
-                        </h3>
-                        <p style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '24px', lineHeight: 1.5 }}>
-                            Gerçek bir mülakatın stresini hissetmek ve ne cevaplayacağını pratik etmek ister misin? Yapay zeka ile hemen birebir deneme yap.
-                        </p>
-                        <Link to="/ai-interview" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                            AI Mülakatı Ücretsiz Başlat
-                        </Link>
-                    </section>
+                    {/* CTA Bridge Tool */}
+                    <PracticeCta
+                        role={roleData.title}
+                        style={{ padding: '24px', textAlign: 'left', border: '1px solid rgba(139,92,246,0.3)', background: 'linear-gradient(135deg, rgba(139,92,246,0.05), transparent)' }}
+                    />
 
                     {/* Tool 2 */}
                     <section className="card hover-lift" style={{ padding: '24px', border: '1px solid var(--border)' }}>

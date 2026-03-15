@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEOHead from '../components/SEOHead';
 import { COMPANIES } from '../data/companies';
+import PracticeCta from '../components/PracticeCta';
 import { Building2, MapPin, Users, Globe, ExternalLink, Briefcase, GraduationCap, ArrowRight, MessageCircle } from 'lucide-react';
 
 export default function CompanyPage() {
@@ -102,6 +103,10 @@ export default function CompanyPage() {
 
                 {/* Right Column: Salary & CTAs */}
                 <aside style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+
+                    <PracticeCta
+                        company={company.name}
+                    />
 
                     <section className="card" style={{ background: 'linear-gradient(135deg, rgba(108,99,255,0.05), transparent)', border: '1px solid rgba(108,99,255,0.2)' }}>
                         <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>

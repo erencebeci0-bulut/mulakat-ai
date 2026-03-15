@@ -16,6 +16,7 @@ const JobRoleSeoPage = lazy(() => import('./pages/JobRoleSeoPage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
 const AiInterviewSimulatorPage = lazy(() => import('./pages/AiInterviewSimulatorPage'));
+const InterviewPracticePage = lazy(() => import('./pages/interview-practice.jsx'));
 const AdminDashboardPage = lazy(() => import('./pages/admin/AdminDashboardPage'));
 const ContentRemovalPage = lazy(() => import('./pages/ContentRemovalPage'));
 const GenericLegalPage = lazy(() => import('./pages/GenericLegalPage'));
@@ -57,6 +58,7 @@ export default function App() {
           <Route path="/cv-hazirla" element={<CvBuilderPage />} />
           <Route path="/cv-builder" element={<CvBuilderPage />} />
           <Route path="/ai-interview" element={<AiInterviewSimulatorPage />} />
+          <Route path="/interview-practice" element={<InterviewPracticePage />} />
 
           {/* Data Platform Base */}
           <Route path="/company/:companyId" element={<CompanyPage />} />

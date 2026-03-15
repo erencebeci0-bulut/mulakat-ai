@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEOHead from '../components/SEOHead';
 import InterviewExperienceForm from '../components/InterviewExperienceForm';
+import PracticeCta from '../components/PracticeCta';
 import { Briefcase, Code, MapPin, Search } from 'lucide-react';
 
 export default function InterviewQuestionsPage() {
@@ -99,6 +100,10 @@ export default function InterviewQuestionsPage() {
 
                 {/* Right Column Context */}
                 <aside style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+
+                    <PracticeCta
+                        role={category !== 'genel' ? title : ''}
+                    />
 
                     <section className="card" style={{ background: 'linear-gradient(135deg, rgba(108,99,255,0.05), transparent)', border: '1px solid rgba(108,99,255,0.2)' }}>
                         <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '16px' }}>
